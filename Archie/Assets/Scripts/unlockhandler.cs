@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SocialPlatforms.Impl;
 public static class unlockhandler
 {
     public static Boolean Unlock_1 { get; set; }

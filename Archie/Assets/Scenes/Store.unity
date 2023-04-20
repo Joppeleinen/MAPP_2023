@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.9622642, g: 0.56646496, b: 0.56646496, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -514,10 +514,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7c91e34d57e64149a22e9f58ada074a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unlockableMatrix:
+    unlock_1: 0
+    unlock_2: 0
+    unlock_3: 0
+    unlock_4: 0
+    unlock_5: 0
+    unlock_6: 0
+    unlock_7: 0
+    unlock_8: 0
+    unlock_9: 0
+    unlock_10: 0
   button: {fileID: 682296978}
   text: {fileID: 397733672}
   lowestValue: 1
   highestValue: 10
+  image_Original: {fileID: 635276534}
+  image_1: {fileID: 21300000, guid: cc104b4573d03ec4294a3d111cbff499, type: 3}
+  image_2: {fileID: 21300000, guid: a7c5d31ec5e6115429b97fdc2bc86a72, type: 3}
+  image_3: {fileID: 21300000, guid: d032da92442ee3649879d2ae1c808d6c, type: 3}
+  image_4: {fileID: 21300000, guid: ab46c209632ce1a42adad263b9241fe0, type: 3}
+  image_5: {fileID: 21300000, guid: fc710cc29da078a4f8f44f9e98308946, type: 3}
+  image_6: {fileID: 21300000, guid: fc710cc29da078a4f8f44f9e98308946, type: 3}
+  image_7: {fileID: 21300000, guid: fc710cc29da078a4f8f44f9e98308946, type: 3}
+  image_8: {fileID: 21300000, guid: fc710cc29da078a4f8f44f9e98308946, type: 3}
+  image_9: {fileID: 21300000, guid: fc710cc29da078a4f8f44f9e98308946, type: 3}
+  image_10: {fileID: 21300000, guid: fc710cc29da078a4f8f44f9e98308946, type: 3}
 --- !u!114 &682296978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1110,7 +1132,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Collection
 --- !u!222 &2078258013
 CanvasRenderer:
   m_ObjectHideFlags: 0
