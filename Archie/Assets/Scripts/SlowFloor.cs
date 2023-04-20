@@ -4,18 +4,31 @@ using UnityEngine;
 
 public class SlowFloor : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public float slowDownFactor = 0.5f;
+    private PlayerMovement playerMovement;
+
+    private void Start()
     {
-        
+        playerMovement = FindObjectOfType<PlayerMovement>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.gameObject.CompareTag("Player"))
+        {
+            playerMovement.moveSpeed *= slowDownFactor;
+        }
     }
 
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            playerMovement.moveSpeed /= slowDownFactor;
+        }
+    }
+    /*
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag=="Player")
@@ -32,5 +45,5 @@ public class SlowFloor : MonoBehaviour
             GameObject player = GameObject.FindWithTag("Player");
             player.GetComponent<PlayerMovement>().moveSpeed *= 2;
         }
-    }
+    }*/
 }
