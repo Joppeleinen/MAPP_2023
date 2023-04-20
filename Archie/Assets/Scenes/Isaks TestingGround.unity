@@ -387,9 +387,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlimeFloor
       objectReference: {fileID: 0}
+    - target: {fileID: 5650331696901975108, guid: 368497db6198cd54698f5ab69316ccdd, type: 3}
+      propertyPath: m_TagString
+      value: Sap
+      objectReference: {fileID: 0}
     - target: {fileID: 5650331696901975109, guid: 368497db6198cd54698f5ab69316ccdd, type: 3}
       propertyPath: slowDownFactor
-      value: 0.06
+      value: 0.52
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 368497db6198cd54698f5ab69316ccdd, type: 3}

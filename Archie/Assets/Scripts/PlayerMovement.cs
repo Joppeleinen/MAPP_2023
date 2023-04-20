@@ -16,7 +16,9 @@ public class PlayerMovement : MonoBehaviour
     public Boolean hasGyro = false;
     public Scrollbar scrollbar;
     public float maximumVelocity = 20f;
-    float number = 0; 
+    float number = 0;
+
+    //private float slowDownFactor = 0.5f;
     
 
     // Start is called before the first frame update
@@ -72,7 +74,24 @@ public class PlayerMovement : MonoBehaviour
     private void moveWithScroll()
     {
         
-        number = ((scrollbar.value * 10f) - 5) / 1.5f;
+        number = ((scrollbar.value * moveSpeed) - 5) / 1.5f;
         
     }
+
+    /*private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Sap")) {
+            moveSpeed *= slowDownFactor;
+            Debug.Log(moveSpeed);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Sap"))
+        {
+            moveSpeed /= slowDownFactor;
+            Debug.Log(moveSpeed);
+        }
+    }*/
 }
