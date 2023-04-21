@@ -65,6 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingPoint: {fileID: 6061997667971008898}
+  moveSpeed: 20
   hasGyro: 0
   scrollbar: {fileID: 0}
   maximumVelocity: 20
