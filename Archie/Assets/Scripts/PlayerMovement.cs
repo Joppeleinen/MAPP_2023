@@ -82,5 +82,10 @@ public class PlayerMovement : MonoBehaviour
         speedMultiplier = 1f;
     }
 
+    public void respawn()
+    {
+        transform.position = startingPoint.vector2; 
+    }
+
 
 }
