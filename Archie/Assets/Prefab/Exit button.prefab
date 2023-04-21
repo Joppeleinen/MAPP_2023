@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9093508408367450978}
   - component: {fileID: 9093508408367450981}
   - component: {fileID: 9093508408367450980}
-  - component: {fileID: 9093508408367450983}
+  - component: {fileID: 5096108929382269737}
   m_Layer: 5
   m_Name: Exit button
   m_TagString: Untagged
@@ -122,9 +122,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9093508408367450983}
-        m_TargetAssemblyTypeName: Exitfromshop, Assembly-CSharp
-        m_MethodName: exitFromStore
+      - m_Target: {fileID: 5096108929382269737}
+        m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
+        m_MethodName: LoadMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -134,7 +134,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &9093508408367450983
+--- !u!114 &5096108929382269737
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,7 +143,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 9093508408367451033}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34d4ad2b7d2558546ac1dc2521bdbd38, type: 3}
+  m_Script: {fileID: 11500000, guid: a742f6a5883da544da5369c0fe7bba84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelToLoad: 0
