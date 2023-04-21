@@ -14,7 +14,7 @@ public class VictoryMenu : MonoBehaviour
 
     public int level;
 
-    void Update()
+   void Update()
     {
         if (gameIsWon == true)
         {
@@ -35,6 +35,7 @@ public class VictoryMenu : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             gameIsWon = true;
+            Win();
         }
 
     }
