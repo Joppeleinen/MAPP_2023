@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     float dirX;
     public float moveSpeed = 20f;
     float fixedSpeed = 10f;
-    public Boolean hasGyro = false;
+    public Boolean hasGyro = true;
     public Scrollbar scrollbar;
     float number = 0;
     public float speedMultiplier = 1f;
@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Input.gyro.enabled = true;
         }
-
+        GyroHandler.GyroActivated = hasGyro;
         moveSpeed = fixedSpeed;
 
         rb = GetComponent<Rigidbody2D>();
