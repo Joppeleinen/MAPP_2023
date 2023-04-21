@@ -7,29 +7,28 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public GameObject startingPoint; 
+    public Spawnpoint startingPoint;
 
     Rigidbody2D rb;
     float dirX;
-    float moveSpeed = 20f;
-    float fixedSpeed = 20f; 
+    public float moveSpeed = 20f;
+    float fixedSpeed = 10f;
     public Boolean hasGyro = false;
     public Scrollbar scrollbar;
-    public float maximumVelocity = 20f;
-    float number = 0; 
-    
+    float number = 0;
+    public float speedMultiplier = 1f;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        respawn();
         if (hasGyro)
         {
             Input.gyro.enabled = true;
         }
-        
+
         moveSpeed = fixedSpeed;
-        
+
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -47,15 +46,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void setControlls(Boolean tobble)
+    public void setControlls(Boolean toggle)
     {
-        hasGyro = tobble;  
+        hasGyro = toggle;
     }
 
-    public void respawn()
-    {
-        transform.position = startingPoint.transform.position;
-    }
 
     private void FixedUpdate()
     {
@@ -71,8 +66,19 @@ public class PlayerMovement : MonoBehaviour
     }
     private void moveWithScroll()
     {
-        
-        number = ((scrollbar.value * 10f) - 5) / 1.5f;
-        
+
+        number = ((scrollbar.value * moveSpeed) - 5) / 1.5f;
+        number = speedMultiplier;
+
+    }
+
+    public void applyMultiplier(float multiplier)
+    {
+        speedMultiplier = multiplier;
+
+    }
+    public void resetMultiplier()
+    {
+        speedMultiplier = 1f;
     }
 }

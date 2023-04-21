@@ -65,6 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingPoint: {fileID: 6061997667971008898}
+  moveSpeed: 20
   hasGyro: 0
   scrollbar: {fileID: 0}
   maximumVelocity: 20
@@ -182,7 +183,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5292857313499111567}
-  - component: {fileID: 1158074768062957642}
   - component: {fileID: 351762731817620173}
   - component: {fileID: 4823008939911790642}
   m_Layer: 0
@@ -207,19 +207,6 @@ Transform:
   m_Father: {fileID: 4681253759904542257}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1158074768062957642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6061997667971008898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 778bd20df47fe7248b49178585668d3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 2525629556488191861}
 --- !u!212 &351762731817620173
 SpriteRenderer:
   m_ObjectHideFlags: 0
