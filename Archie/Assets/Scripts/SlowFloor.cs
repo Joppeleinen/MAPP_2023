@@ -17,7 +17,7 @@ public class SlowFloor : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            playerMovement.moveSpeed *= slowDownFactor;
+            playerMovement.applyMultiplier(slowDownFactor);
         }
     }
 
@@ -25,7 +25,7 @@ public class SlowFloor : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            playerMovement.moveSpeed /= slowDownFactor;
+            playerMovement.resetMultiplier();
         }
     }
     /*
