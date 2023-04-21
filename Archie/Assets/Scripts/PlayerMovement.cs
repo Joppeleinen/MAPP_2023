@@ -22,6 +22,11 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        respawn();
+        if (!SystemInfo.supportsGyroscope)
+        {
+            hasGyro = false; 
+        }
         if (hasGyro)
         {
             Input.gyro.enabled = true;
@@ -66,10 +71,9 @@ public class PlayerMovement : MonoBehaviour
     }
     private void moveWithScroll()
     {
-
-        number = ((scrollbar.value * moveSpeed) - 5) / 1.5f;
-        number = speedMultiplier;
-
+        //number = ((scrollbar.value * 10f) - 5) / 1.5f;
+        number = (scrollbar.value - 0.5f) * (10f / 1.5f); 
+        number *= speedMultiplier;
     }
 
     public void applyMultiplier(float multiplier)
