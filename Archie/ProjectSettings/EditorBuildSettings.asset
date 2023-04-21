@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/LinuScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Meny/MainMenu.unity
@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Meny/Collection.unity
     guid: 5a10a1acdf812dc47b86770822204985
+  - enabled: 1
+    path: Assets/Scenes/Meny/LevelSelect.unity
+    guid: d70551d159427ca4da47beee0b66e405
+  - enabled: 1
+    path: Assets/Scenes/Meny/SettingsMenu.unity
+    guid: 90f57b43cc32fc447813e23f7eb9af6b
   m_configObjects: {}

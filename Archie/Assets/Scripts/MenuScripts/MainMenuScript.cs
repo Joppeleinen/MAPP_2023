@@ -25,6 +25,10 @@ public class MainMenuScript : MonoBehaviour
         SceneManager.LoadScene("SettingsMenu");
     }
 
+    public void OpenStore()
+    {
+        SceneManager.LoadScene("Store");
+    }
     public void QuitGame()
     {
         Application.Quit();
