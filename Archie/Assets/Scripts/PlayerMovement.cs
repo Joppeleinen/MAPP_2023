@@ -82,13 +82,5 @@ public class PlayerMovement : MonoBehaviour
         speedMultiplier = 1f;
     }
 
-    public void applyMultiplier(float multiplier)
-    {
-        speedMultiplier *= multiplier;
 
-    }
-    public void resetMultiplier()
-    {
-        speedMultiplier = 1f; 
-    }
 }
