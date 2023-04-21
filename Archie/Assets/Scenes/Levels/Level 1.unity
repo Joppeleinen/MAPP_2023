@@ -499,6 +499,7 @@ GameObject:
   - component: {fileID: 307446511}
   - component: {fileID: 307446515}
   - component: {fileID: 307446516}
+  - component: {fileID: 307446517}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -581,7 +582,6 @@ RectTransform:
   m_Children:
   - {fileID: 1049623505}
   - {fileID: 1550921895}
-  - {fileID: 1600889446}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -616,8 +616,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winMenuUI: {fileID: 714120122}
-  pauseButton: {fileID: 0}
+  pauseButton: {fileID: 1049623504}
   level: 2
+--- !u!114 &307446517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307446509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e3ea1015cf69e948b82d6a0dffcc206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loseMenuUI: {fileID: 1600889445}
+  pauseButton: {fileID: 1049623504}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1370,13 +1384,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 307446509}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 307446517}
+        m_TargetAssemblyTypeName: LoseMenu, Assembly-CSharp
+        m_MethodName: RestartLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1664,6 +1678,7 @@ RectTransform:
   m_Children:
   - {fileID: 1064949464}
   - {fileID: 714120123}
+  - {fileID: 1600889446}
   m_Father: {fileID: 307446514}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1689,7 +1704,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1600889446
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1697,7 +1712,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600889445}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1705,13 +1720,13 @@ RectTransform:
   - {fileID: 1056511880}
   - {fileID: 1112233250}
   - {fileID: 620274045}
-  m_Father: {fileID: 307446514}
+  m_Father: {fileID: 1550921895}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 837.6667, y: 382}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1600889447
 MonoBehaviour:

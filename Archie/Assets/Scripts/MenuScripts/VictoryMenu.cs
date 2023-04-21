@@ -18,11 +18,11 @@ public class VictoryMenu : MonoBehaviour
     {
         if (gameIsWon == true)
         {
-            Pause();
+            Win();
         }
     }
 
-    public void Pause()
+    public void Win()
     {
         winMenuUI.SetActive(true);
         pauseButton.SetActive(false);
