@@ -64,11 +64,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 615b4baf1a3e80443a2147f211dc1b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingPoint: {fileID: 6061997667971008898}
+  startingPoint: {fileID: 4823008939911790642}
   moveSpeed: 20
   hasGyro: 0
-  scrollbar: {fileID: 0}
-  maximumVelocity: 20
+  scrollbar: {fileID: 8948526138749914119, guid: c05dfed3f07e01449b4d9244ce03860d, type: 3}
+  speedMultiplier: 1
 --- !u!50 &8724069437285517468
 Rigidbody2D:
   serializedVersion: 4
@@ -272,3 +272,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SR: {fileID: 351762731817620173}
+  vector2: {x: 0, y: 0}
