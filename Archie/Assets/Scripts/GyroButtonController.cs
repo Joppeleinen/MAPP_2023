@@ -5,48 +5,45 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GyroButtonController : MonoBehaviour{
+public class GyroButtonController : MonoBehaviour
+{
     public GyroMatrix gyroMatrix;
     public Button button;
     private string gyroMatrixPath;
     public Image image;
-    public Sprite check;
-    public Sprite cross;
-
-
+    public Sprite spriteoff;
+    public Sprite spriteon;
 
 
     public void Start()
     {
-
         gyroMatrixPath = $"{Application.persistentDataPath}/GyroMatrix.json";
         if (File.Exists(gyroMatrixPath))
         {
             string json = File.ReadAllText(gyroMatrixPath);
             gyroMatrix = JsonUtility.FromJson<GyroMatrix>(json);
         }
-        if (GyroHandler.GyroActivated == true)
+        if (gyroMatrix.gyroActivated == false)
         {
-            image.sprite = check;
+            image.sprite = spriteoff;
         }
-        if(GyroHandler.GyroActivated == false)
-        {
-            image.sprite = cross;
+        else {
+            image.sprite = spriteon;
         }
     }
 
-    public void toggleGyro()
+    public void ToggleGyro()
     {
-        if (GyroHandler.GyroActivated == true)
+        if (gyroMatrix.gyroActivated == true)
         {
-            GyroHandler.GyroActivated = false;
-            image.sprite = check;
-
+            gyroMatrix.gyroActivated = false;
+            image.sprite = spriteoff;
         }
-        else {
-            GyroHandler.GyroActivated = true;
-            image.sprite = cross;
+        else if(gyroMatrix.gyroActivated == false){
+            gyroMatrix.gyroActivated = true;
+            image.sprite = spriteon;
         }
+        GyroHandler.GyroActivated = gyroMatrix.gyroActivated;
         SaveJson();
     }
 

@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &54459429
+--- !u!1 &89510140
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,9 +131,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 54459430}
-  - component: {fileID: 54459432}
-  - component: {fileID: 54459431}
+  - component: {fileID: 89510141}
+  - component: {fileID: 89510143}
+  - component: {fileID: 89510142}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -141,33 +141,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &54459430
+--- !u!224 &89510141
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 54459429}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_GameObject: {fileID: 89510140}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1095579963}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 181, y: -0.0000047684}
-  m_SizeDelta: {x: 47.7084, y: 48.4442}
+  m_AnchoredPosition: {x: 206, y: 2.7}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &54459431
+--- !u!114 &89510142
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 54459429}
+  m_GameObject: {fileID: 89510140}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6804fe774fc72cb4fa2c4ccab4a25d80, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -191,13 +191,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &54459432
+--- !u!222 &89510143
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 54459429}
+  m_GameObject: {fileID: 89510140}
   m_CullTransparentMesh: 1
 --- !u!1 &231551892
 GameObject:
@@ -539,7 +539,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1095579963}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -620,8 +620,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 54459430}
   - {fileID: 999796080}
+  - {fileID: 89510141}
   m_Father: {fileID: 231551893}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -642,10 +642,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77f48e6dfab0b624b80af04f6569282a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gyroMatrix:
+    gyroActivated: 0
   button: {fileID: 1095579965}
-  image: {fileID: 54459431}
-  check: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  cross: {fileID: 21300000, guid: 6804fe774fc72cb4fa2c4ccab4a25d80, type: 3}
+  image: {fileID: 89510142}
+  spriteoff: {fileID: 21300000, guid: 6804fe774fc72cb4fa2c4ccab4a25d80, type: 3}
+  spriteon: {fileID: 21300000, guid: b9fab86f25dd1424bb72a5bf4ec25bde, type: 3}
 --- !u!114 &1095579965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -692,7 +694,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1095579964}
         m_TargetAssemblyTypeName: GyroButtonController, Assembly-CSharp
-        m_MethodName: toggleGyro
+        m_MethodName: ToggleGyro
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

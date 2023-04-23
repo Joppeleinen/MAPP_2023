@@ -22,12 +22,14 @@ public class ButtonController : MonoBehaviour
     [SerializeField] Sprite image_8;
     [SerializeField] Sprite image_9;
     [SerializeField] Sprite image_10;
+    [SerializeField] Text pointstext;
     public static int score = 1000;
 
     private string unlockMatrixPath;
 
     public void Start()
     {
+        pointstext.text = "POINTS( " + score + " )";
         unlockMatrixPath = $"{Application.persistentDataPath}/UnlockMatrix.json";
 
         if (File.Exists(unlockMatrixPath)) { 
@@ -118,6 +120,7 @@ public class ButtonController : MonoBehaviour
         else {
             text.text = "Not enough score!";
         }
+        pointstext.text = "POINTS( " + score + " )";
         SaveJson();
     }
     private void SaveJson()
