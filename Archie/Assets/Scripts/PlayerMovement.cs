@@ -4,10 +4,13 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 
 public class PlayerMovement : MonoBehaviour
 {
     public Spawnpoint startingPoint;
+
+    public GyroMatrix gyroMatrix;
 
     Rigidbody2D rb;
     float dirX;
@@ -17,25 +20,25 @@ public class PlayerMovement : MonoBehaviour
     public Scrollbar scrollbar;
     float number = 0;
     public float speedMultiplier = 1f;
+    private string gyroMatrixPath;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        gyroMatrixPath = $"{Application.persistentDataPath}/GyroMatrix.json";
+        if (File.Exists(gyroMatrixPath))
+        {
+            string json = File.ReadAllText(gyroMatrixPath);
+            gyroMatrix = JsonUtility.FromJson<GyroMatrix>(json);
+            GyroHandler.GyroActivated = gyroMatrix.gyroActivated;
+        }
+        hasGyro = GyroHandler.GyroActivated;
         respawn();
-        if (!SystemInfo.supportsGyroscope)
-        {
-            hasGyro = false; 
-        }
-        else
-        {
-            hasGyro = true;
-        }
         if (hasGyro)
         {
             Input.gyro.enabled = true;
         }
-        GyroHandler.GyroActivated = hasGyro;
         moveSpeed = fixedSpeed;
 
         rb = GetComponent<Rigidbody2D>();
@@ -92,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void respawn()
     {
-        transform.position = startingPoint.vector2;
+        transform.position = startingPoint.vector2; 
     }
 
 
