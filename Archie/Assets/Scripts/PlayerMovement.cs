@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using UnityEditor.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class PlayerMovement : MonoBehaviour
     public float speedMultiplier = 2f;
     private string gyroMatrixPath;
     public float limits = 10f;
+
+    public float leftWindMultiplier = 1f;
+    public float leftWindDuration = 1f;
+    public Boolean activateWindTimer = false;
+    public float windStrengthMultiplier = 1f;
 
 
     // Start is called before the first frame update
@@ -58,6 +64,19 @@ public class PlayerMovement : MonoBehaviour
         {
             moveWithScroll();
         }
+        if(activateWindTimer == true)
+        {
+            leftWindDuration -= Time.deltaTime;
+            if(leftWindDuration > 0)
+            {
+                windStrengthMultiplier = 1.2f; 
+            }
+            else
+            {
+                windStrengthMultiplier = 1f;
+                activateWindTimer = false; 
+            }
+        }
     }
 
     public void setControlls(Boolean toggle)
@@ -70,11 +89,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if (hasGyro)
         {
-            rb.velocity = new Vector2(dirX, rb.velocity.y);
+            //rb.velocity = new Vector2(dirX, rb.velocity.y);
+            rb.AddForce(new Vector2(dirX, rb.velocity.y));
         }
         else
         {
-            rb.velocity = new Vector2(number, rb.velocity.y);
+            rb.AddForce(new Vector2(number, rb.velocity.y));
+            //rb.velocity = new Vector2(number, rb.velocity.y);
         }
 
     }
@@ -82,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //number = ((scrollbar.value * 10f) - 5) / 1.5f;
         number = (scrollbar.value - 0.5f) * (10f / 1.5f); 
-        number *= speedMultiplier;
+        number *= speedMultiplier * windStrengthMultiplier;
     }
 
     public void applyMultiplier(float multiplier)
@@ -99,6 +120,13 @@ public class PlayerMovement : MonoBehaviour
     {
         transform.position = startingPoint.vector2; 
     }
+
+    public void leftWind()
+    {
+        applyMultiplier(leftWindMultiplier);
+        activateWindTimer = true; 
+    }
+
 
 
 }
