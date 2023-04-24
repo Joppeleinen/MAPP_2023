@@ -332,7 +332,6 @@ GameObject:
   - component: {fileID: 307446511}
   - component: {fileID: 307446515}
   - component: {fileID: 307446516}
-  - component: {fileID: 307446517}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -451,20 +450,6 @@ MonoBehaviour:
   winMenuUI: {fileID: 714120122}
   pauseButton: {fileID: 1049623504}
   level: 2
---- !u!114 &307446517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 307446509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e3ea1015cf69e948b82d6a0dffcc206, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loseMenuUI: {fileID: 1600889445}
-  pauseButton: {fileID: 1049623504}
 --- !u!1001 &389605276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -596,7 +581,7 @@ GameObject:
   m_Component:
   - component: {fileID: 495493872}
   - component: {fileID: 495493871}
-  - component: {fileID: 495493870}
+  - component: {fileID: 495493873}
   - component: {fileID: 495493869}
   m_Layer: 0
   m_Name: SlimeFloor
@@ -615,7 +600,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.13396263, y: -0.47844195}
@@ -631,21 +616,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.0744896, y: 1.2031159}
   m_EdgeRadius: 0
---- !u!114 &495493870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 495493868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9712ed2c7e33c54989b3005c39d1885, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bounce: 15
-  audioSource: {fileID: 0}
-  jumpPadSound: {fileID: 0}
 --- !u!212 &495493871
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -713,6 +683,19 @@ Transform:
   m_Father: {fileID: 803440912}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &495493873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495493868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b360c7e8e86744cb3d31d5ca28aced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasBoxCollider: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1531,6 +1514,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2336489168917717096, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
   m_PrefabInstance: {fileID: 2336489169767416333}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1600889449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600889445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e3ea1015cf69e948b82d6a0dffcc206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loseMenuUI: {fileID: 1600889445}
+  pauseButton: {fileID: 1049623504}
 --- !u!1 &1664644167
 GameObject:
   m_ObjectHideFlags: 0
@@ -1730,7 +1727,7 @@ EdgeCollider2D:
   - {x: 1.2133614, y: -0.028218402}
   - {x: 1.6984407, y: 0.09739127}
   - {x: 2.880399, y: 0.087779365}
-  - {x: 3.158047, y: 0.2992932}
+  - {x: 3.129998, y: 0.0736131}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -2105,7 +2102,7 @@ PrefabInstance:
     - target: {fileID: 2336489168731084590, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 307446517}
+      objectReference: {fileID: 0}
     - target: {fileID: 2336489168902419114, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2193,6 +2190,10 @@ PrefabInstance:
     - target: {fileID: 2336489168902419115, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
       propertyPath: m_Name
       value: Menus
+      objectReference: {fileID: 0}
+    - target: {fileID: 2336489168917717096, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
+      propertyPath: m_TagString
+      value: Lose
       objectReference: {fileID: 0}
     - target: {fileID: 2336489168942887436, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

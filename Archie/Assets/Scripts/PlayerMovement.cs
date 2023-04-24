@@ -88,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void respawn()
     {
-        transform.position = startingPoint.vector2; 
+        transform.position = startingPoint.vector2;
     }
 
 

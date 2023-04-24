@@ -6,6 +6,7 @@ public class Killzone : MonoBehaviour
 {
 
     public bool hasBoxCollider;
+    
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
