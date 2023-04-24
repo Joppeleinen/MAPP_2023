@@ -1205,6 +1205,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 220084388}
     m_Modifications:
+    - target: {fileID: 1349617651025451618, guid: ed8f73a6884da7d48bb5056d6ba76f2c, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1349617651025451618, guid: ed8f73a6884da7d48bb5056d6ba76f2c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0a0f1f629ae7dc341a57de39cd9a8ec5, type: 3}
     - target: {fileID: 1666137003143328266, guid: ed8f73a6884da7d48bb5056d6ba76f2c, type: 3}
       propertyPath: m_Name
       value: Button (Legacy) (8)
