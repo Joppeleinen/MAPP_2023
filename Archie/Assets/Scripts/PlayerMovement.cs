@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     float number = 0;
     public float speedMultiplier = 1f;
     private string gyroMatrixPath;
+    public float limits = 10f;
 
 
     // Start is called before the first frame update
@@ -50,7 +51,8 @@ public class PlayerMovement : MonoBehaviour
         if (hasGyro)
         {
             dirX = Input.acceleration.x * moveSpeed;
-            transform.position = new Vector2(Mathf.Clamp(transform.position.x, -7.5f, 7.5f), transform.position.y);
+            //transform.position = new Vector2(Mathf.Clamp(transform.position.x, -limits, limits), transform.position.y);
+            transform.position = new Vector2(transform.position.x, transform.position.y);
         }
         else
         {
@@ -68,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (hasGyro)
         {
-            rb.velocity = new Vector2(dirX, 0f);
+            rb.velocity = new Vector2(dirX, rb.velocity.y);
         }
         else
         {
