@@ -27,6 +27,10 @@ public class PlayerMovement : MonoBehaviour
         {
             hasGyro = false; 
         }
+        else
+        {
+            hasGyro = true;
+        }
         if (hasGyro)
         {
             Input.gyro.enabled = true;
