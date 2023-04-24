@@ -399,7 +399,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!224 &307446514
 RectTransform:
@@ -1730,7 +1730,7 @@ EdgeCollider2D:
   - {x: 1.2133614, y: -0.028218402}
   - {x: 1.6984407, y: 0.09739127}
   - {x: 2.880399, y: 0.087779365}
-  - {x: 3.158047, y: 0.2992932}
+  - {x: 3.129998, y: 0.0736131}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
