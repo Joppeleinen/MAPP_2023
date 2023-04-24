@@ -12,14 +12,14 @@ public class CameraTrigger : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            if(collision.transform.position.x < transform.position.x)
-            {
+           // if(collision.transform.position.x < transform.position.x)
+            //{
                 cam.MoveToNewRoom(nextRoom);
-            }
-            else
-            {
-                cam.MoveToNewRoom(previousRoom);
-            }
+            //}
+            //else
+            //{
+             //   cam.MoveToNewRoom(previousRoom);
+            //}
         }
 
     }
