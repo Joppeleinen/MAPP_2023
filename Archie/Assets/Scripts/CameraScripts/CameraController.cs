@@ -8,7 +8,12 @@ public class CameraController : MonoBehaviour
     private float currentPosX;
     private float currentposY;
     private Vector3 velocity = Vector3.zero;
+    [SerializeField] private GameObject startPos;
 
+    private void Start()
+    {
+        transform.position = new Vector3(startPos.transform.position.x, startPos.transform.position.y, -10);
+    }
     private void Update()
     {
         transform.position = Vector3.SmoothDamp(transform.position, new Vector3(currentPosX, currentposY, transform.position.z), ref velocity, speed);

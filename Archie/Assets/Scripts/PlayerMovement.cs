@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public Boolean hasGyro = true;
     public Scrollbar scrollbar;
     float number = 0;
-    public float speedMultiplier = 1f;
+    public float speedMultiplier = 2f;
     private string gyroMatrixPath;
     public float limits = 10f;
 
@@ -92,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void resetMultiplier()
     {
-        speedMultiplier = 1f;
+        speedMultiplier = 2f;
     }
 
     public void respawn()
