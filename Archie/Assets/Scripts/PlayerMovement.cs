@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        hasGyro = GyroHandler.GyroActivated;
         respawn();
         if (!SystemInfo.supportsGyroscope)
         {
@@ -31,7 +32,6 @@ public class PlayerMovement : MonoBehaviour
         {
             Input.gyro.enabled = true;
         }
-        GyroHandler.GyroActivated = hasGyro;
         moveSpeed = fixedSpeed;
 
         rb = GetComponent<Rigidbody2D>();
