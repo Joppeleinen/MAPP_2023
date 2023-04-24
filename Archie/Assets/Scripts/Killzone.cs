@@ -6,6 +6,8 @@ public class Killzone : MonoBehaviour
 {
 
     public bool hasBoxCollider;
+
+    public LoseMenu lose;
     
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,8 +16,9 @@ public class Killzone : MonoBehaviour
             GameObject player = GameObject.FindWithTag("Player");
             if (player != null)
             {
-
+                lose.loseLevel();
                 player.GetComponent<PlayerMovement>().respawn();
+                
             }
         }
     }
