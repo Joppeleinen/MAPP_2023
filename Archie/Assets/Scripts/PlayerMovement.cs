@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody2D rb;
     float dirX;
-    public float moveSpeed = 20f;
+    public float moveSpeed = 40f;
     float fixedSpeed = 10f;
     public Boolean hasGyro = true;
     public Scrollbar scrollbar;
