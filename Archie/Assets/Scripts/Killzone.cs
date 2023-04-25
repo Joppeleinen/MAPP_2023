@@ -16,11 +16,8 @@ public class Killzone : MonoBehaviour
             GameObject player = GameObject.FindWithTag("Player");
             if (player != null)
             {
-                if(lose != null){
-                    lose.loseLevel();
-                }
-                
-                player.GetComponent<PlayerMovement>().respawn();
+                lose.loseLevel();
+                //player.GetComponent<PlayerMovement>().respawn();
                 
             }
         }

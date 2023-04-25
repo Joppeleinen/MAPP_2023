@@ -5,11 +5,12 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
-using UnityEditor.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
     public Spawnpoint startingPoint;
+    public GameObject respawnPosition;
+    public LoseMenu restartGame;
 
     public GyroMatrix gyroMatrix;
 
@@ -19,20 +20,17 @@ public class PlayerMovement : MonoBehaviour
     float fixedSpeed = 10f;
     public Boolean hasGyro = true;
     public Scrollbar scrollbar;
+    public GameObject scrollbarObject;
     float number = 0;
     public float speedMultiplier = 2f;
     private string gyroMatrixPath;
     public float limits = 10f;
 
-    public float leftWindMultiplier = 1f;
-    public float leftWindDuration = 1f;
-    public Boolean activateWindTimer = false;
-    public float windStrengthMultiplier = 1f;
-
 
     // Start is called before the first frame update
     void Start()
     {
+        
         gyroMatrixPath = $"{Application.persistentDataPath}/GyroMatrix.json";
         if (File.Exists(gyroMatrixPath))
         {
@@ -41,10 +39,15 @@ public class PlayerMovement : MonoBehaviour
             GyroHandler.GyroActivated = gyroMatrix.gyroActivated;
         }
         hasGyro = GyroHandler.GyroActivated;
-        respawn();
+        respawn(startingPoint.vector2);
         if (hasGyro)
         {
             Input.gyro.enabled = true;
+            scrollbar.gameObject.SetActive(false);
+        }
+        else
+        {
+            scrollbar.gameObject.SetActive(true);
         }
         moveSpeed = fixedSpeed;
 
@@ -64,19 +67,6 @@ public class PlayerMovement : MonoBehaviour
         {
             moveWithScroll();
         }
-        if(activateWindTimer == true)
-        {
-            leftWindDuration -= Time.deltaTime;
-            if(leftWindDuration > 0)
-            {
-                windStrengthMultiplier = 1.2f; 
-            }
-            else
-            {
-                windStrengthMultiplier = 1f;
-                activateWindTimer = false; 
-            }
-        }
     }
 
     public void setControlls(Boolean toggle)
@@ -89,13 +79,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (hasGyro)
         {
-            //rb.velocity = new Vector2(dirX, rb.velocity.y);
-            rb.AddForce(new Vector2(dirX, rb.velocity.y));
+            rb.velocity = new Vector2(dirX, rb.velocity.y);
         }
         else
         {
-            rb.AddForce(new Vector2(number, rb.velocity.y));
-            //rb.velocity = new Vector2(number, rb.velocity.y);
+            rb.velocity = new Vector2(number, rb.velocity.y);
         }
 
     }
@@ -103,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
     {
         //number = ((scrollbar.value * 10f) - 5) / 1.5f;
         number = (scrollbar.value - 0.5f) * (10f / 1.5f); 
-        number *= speedMultiplier * windStrengthMultiplier;
+        number *= speedMultiplier;
     }
 
     public void applyMultiplier(float multiplier)
@@ -116,17 +104,26 @@ public class PlayerMovement : MonoBehaviour
         speedMultiplier = 2f;
     }
 
+    public void respawn(Vector2 boop)
+    {
+        transform.position = boop;
+        //transform.position = startingPoint.vector2; 
+    }
+
     public void respawn()
     {
-        transform.position = startingPoint.vector2; 
+        transform.position = startingPoint.vector2;
     }
 
-    public void leftWind()
+    public void respawnFromCheckpoint()
     {
-        applyMultiplier(leftWindMultiplier);
-        activateWindTimer = true; 
+        respawn(respawnPosition.transform.position);
+        //gameObject.transform.position = respawnPosition.transform.position;
+        //restartGame.restartGameWorld();
     }
 
-
-
+    public void ChangeRespawnPosition(GameObject newRespawnPosition)
+    {
+        respawnPosition = newRespawnPosition;
+    }
 }
