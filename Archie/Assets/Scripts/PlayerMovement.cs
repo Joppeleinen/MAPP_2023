@@ -9,6 +9,8 @@ using System.IO;
 public class PlayerMovement : MonoBehaviour
 {
     public Spawnpoint startingPoint;
+    private GameObject respawnPosition;
+    public LoseMenu restartGame;
 
     public GyroMatrix gyroMatrix;
 
@@ -35,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
             GyroHandler.GyroActivated = gyroMatrix.gyroActivated;
         }
         hasGyro = GyroHandler.GyroActivated;
-        respawn();
+        respawn(startingPoint.vector2);
         if (hasGyro)
         {
             Input.gyro.enabled = true;
@@ -95,10 +97,26 @@ public class PlayerMovement : MonoBehaviour
         speedMultiplier = 2f;
     }
 
-    public void respawn()
+    public void respawn(Vector2 boop)
     {
-        transform.position = startingPoint.vector2; 
+        transform.position = boop;
+        //transform.position = startingPoint.vector2; 
     }
 
+    public void respawn()
+    {
+        transform.position = startingPoint.vector2;
+    }
 
+    public void respawnFromCheckpoint()
+    {
+        respawn(respawnPosition.transform.position);
+        //gameObject.transform.position = respawnPosition.transform.position;
+        //restartGame.restartGameWorld();
+    }
+
+    public void ChangeRespawnPosition(GameObject newRespawnPosition)
+    {
+        respawnPosition = newRespawnPosition;
+    }
 }

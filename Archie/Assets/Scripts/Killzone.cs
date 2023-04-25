@@ -17,7 +17,7 @@ public class Killzone : MonoBehaviour
             if (player != null)
             {
                 lose.loseLevel();
-                player.GetComponent<PlayerMovement>().respawn();
+                //player.GetComponent<PlayerMovement>().respawn();
                 
             }
         }
