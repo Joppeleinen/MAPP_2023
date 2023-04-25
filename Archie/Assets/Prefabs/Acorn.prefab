@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4858989404837955857}
   - component: {fileID: 6626421095585269833}
   - component: {fileID: 8724069437285517468}
+  - component: {fileID: 4894110710785372372}
   m_Layer: 0
   m_Name: Acorn
   m_TagString: Player
@@ -90,6 +91,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4894110710785372372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2525629556488191861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac37edaca1b69b4daa39fec06a69174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2885055965690368981
 GameObject:
   m_ObjectHideFlags: 0
