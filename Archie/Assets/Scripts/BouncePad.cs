@@ -30,7 +30,7 @@ public class BouncePad : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            print("testing");
+            
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
             audioSource.PlayOneShot(jumpPadSound);
             sendBounce = true;

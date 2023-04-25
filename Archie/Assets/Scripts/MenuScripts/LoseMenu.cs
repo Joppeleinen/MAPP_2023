@@ -20,6 +20,7 @@ public class LoseMenu : MonoBehaviour
     public void restartLevel()
     {
         Time.timeScale = 1f;
+
         lmao.respawn();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         

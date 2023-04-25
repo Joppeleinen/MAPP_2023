@@ -9,7 +9,7 @@ using System.IO;
 public class PlayerMovement : MonoBehaviour
 {
     public Spawnpoint startingPoint;
-    private GameObject respawnPosition;
+    public GameObject respawnPosition;
     public LoseMenu restartGame;
 
     public GyroMatrix gyroMatrix;
@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     float fixedSpeed = 10f;
     public Boolean hasGyro = true;
     public Scrollbar scrollbar;
+    public GameObject scrollbarObject;
     float number = 0;
     public float speedMultiplier = 2f;
     private string gyroMatrixPath;
@@ -29,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         gyroMatrixPath = $"{Application.persistentDataPath}/GyroMatrix.json";
         if (File.Exists(gyroMatrixPath))
         {
@@ -41,6 +43,11 @@ public class PlayerMovement : MonoBehaviour
         if (hasGyro)
         {
             Input.gyro.enabled = true;
+            scrollbar.gameObject.SetActive(false);
+        }
+        else
+        {
+            scrollbar.gameObject.SetActive(true);
         }
         moveSpeed = fixedSpeed;
 
