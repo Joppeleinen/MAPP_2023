@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class VictoryMenu : MonoBehaviour
 {
 
-    public static bool gameIsWon = false;
+    public bool gameIsWon = false;
 
     public GameObject winMenuUI;
 
@@ -14,13 +14,6 @@ public class VictoryMenu : MonoBehaviour
 
     public int level;
 
-   void Update()
-    {
-        if (gameIsWon == true)
-        {
-            Win();
-        }
-    }
 
     public void Win()
     {
@@ -42,9 +35,17 @@ public class VictoryMenu : MonoBehaviour
 
     public void nextLevel()
     {
+        gameIsWon = false;
         Time.timeScale = 1f;
         pauseButton.SetActive(true);
         SceneManager.LoadScene("Level " + level.ToString());
+    }
+
+    public void goToMainAfterWin()
+    {
+        gameIsWon = false;
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(0);
     }
 
 }
