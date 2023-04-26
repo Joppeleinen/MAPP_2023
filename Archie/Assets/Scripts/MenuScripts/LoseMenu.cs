@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LoseMenu : MonoBehaviour
 {
     public GameObject loseMenuUI;
-    public PlayerMovement lmao;
+    public PlayerMovement playerMov;
     public GameObject pauseButton;
     public Spawnpoint startingPoint;
 
@@ -21,7 +21,7 @@ public class LoseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
 
-        lmao.respawn();
+        playerMov.respawn();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         
 
@@ -32,7 +32,7 @@ public class LoseMenu : MonoBehaviour
         loseMenuUI.SetActive(false);
         pauseButton.SetActive(true);
         Time.timeScale = 1f;
-        lmao.respawnFromCheckpoint();
+        playerMov.respawnFromCheckpoint();
         SceneManager.LoadScene(5);
     }
     // Update is called once per frame
