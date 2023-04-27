@@ -106,13 +106,16 @@ public class PlayerMovement : MonoBehaviour
 
     public void respawn(Vector2 boop)
     {
+        //rb.velocity = new Vector2(1f, 1f);
         transform.position = boop;
         //transform.position = startingPoint.vector2; 
     }
 
     public void respawn()
     {
+        rb.velocity = new Vector2(1f, 1f);
         transform.position = startingPoint.vector2;
+        
     }
 
     public void respawnFromCheckpoint()
