@@ -9,6 +9,7 @@ public class LoseMenu : MonoBehaviour
     public PlayerMovement playerMov;
     public GameObject pauseButton;
     public Spawnpoint startingPoint;
+    public RespawnBlock block;
 
     public void loseLevel()
     {
@@ -32,6 +33,7 @@ public class LoseMenu : MonoBehaviour
         loseMenuUI.SetActive(false);
         pauseButton.SetActive(true);
         Time.timeScale = 1f;
+        block.respawnFromCheckpoint();
         playerMov.respawnFromCheckpoint();
     }
     // Update is called once per frame
