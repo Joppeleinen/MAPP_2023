@@ -33,7 +33,6 @@ public class LoseMenu : MonoBehaviour
         pauseButton.SetActive(true);
         Time.timeScale = 1f;
         playerMov.respawnFromCheckpoint();
-        SceneManager.LoadScene(5);
     }
     // Update is called once per frame
 
