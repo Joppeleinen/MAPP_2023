@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &26857983 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 256094905705054976, guid: e782934317625464a8ee535631c6d3bb, type: 3}
+  m_PrefabInstance: {fileID: 57671285}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &50242372
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,8 +172,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -380,8 +385,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62b360c7e8e86744cb3d31d5ca28aced, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   hasBoxCollider: 0
   lose: {fileID: 1600889451}
   respawnImmediately: 0
@@ -595,8 +600,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Spline:
     m_IsOpenEnded: 0
     m_ControlPoints:
@@ -907,8 +912,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -1075,8 +1080,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -1202,8 +1207,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
@@ -1222,8 +1227,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
@@ -1370,8 +1375,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -1738,8 +1743,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
   m_BlockingObjects: 0
   m_BlockingMask:
@@ -1755,8 +1760,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
@@ -1823,8 +1828,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0df4c21d9ddc6954d84e38d6a35eab87, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   gameIsPaused: 0
   pauseMenuUI: {fileID: 1064949461}
 --- !u!114 &307446516
@@ -1837,8 +1842,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e974f774c3f52f84294b13baa8b57f23, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   gameIsWon: 0
   winMenuUI: {fileID: 714120122}
   pauseButton: {fileID: 1049623504}
@@ -2158,8 +2163,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e974f774c3f52f84294b13baa8b57f23, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   gameIsWon: 0
   winMenuUI: {fileID: 714120122}
   pauseButton: {fileID: 1064949461}
@@ -2234,8 +2239,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9712ed2c7e33c54989b3005c39d1885, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   bounce: 20
   audioSource: {fileID: 0}
   jumpPadSound: {fileID: 0}
@@ -2497,8 +2502,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9712ed2c7e33c54989b3005c39d1885, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   bounce: 17
   audioSource: {fileID: 0}
   jumpPadSound: {fileID: 0}
@@ -2577,8 +2582,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -2814,8 +2819,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dce78d2e4d8bf746a005600ac88681a, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   speed: 0.5
   startPos: {fileID: 2033061747}
 --- !u!1 &543401946
@@ -2900,8 +2905,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -3095,8 +3100,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9712ed2c7e33c54989b3005c39d1885, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   bounce: 17
   audioSource: {fileID: 0}
   jumpPadSound: {fileID: 0}
@@ -3200,8 +3205,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -3355,8 +3360,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9712ed2c7e33c54989b3005c39d1885, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   bounce: 17
   audioSource: {fileID: 0}
   jumpPadSound: {fileID: 0}
@@ -3447,7 +3452,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1870794364}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &729422925
 BoxCollider2D:
@@ -3519,8 +3524,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -3713,8 +3718,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70bce4c248788664b81864f8bd7a65c6, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   previousRoom: {fileID: 1891990637}
   nextRoom: {fileID: 984065573}
   cam: {fileID: 519420033}
@@ -3948,8 +3953,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9712ed2c7e33c54989b3005c39d1885, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   bounce: 30
   audioSource: {fileID: 0}
   jumpPadSound: {fileID: 0}
@@ -4036,7 +4041,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1870794364}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &828901471
 MonoBehaviour:
@@ -4048,8 +4053,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70bce4c248788664b81864f8bd7a65c6, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   previousRoom: {fileID: 2033061748}
   nextRoom: {fileID: 1891990637}
   cam: {fileID: 519420033}
@@ -4140,7 +4145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8410285996040154023, guid: 1449ab6193a688143aa711110225cc90, type: 3}
       propertyPath: lose
-      value:
+      value: 
       objectReference: {fileID: 1600889451}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1449ab6193a688143aa711110225cc90, type: 3}
@@ -4224,8 +4229,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -4365,8 +4370,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70bce4c248788664b81864f8bd7a65c6, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   previousRoom: {fileID: 984065573}
   nextRoom: {fileID: 0}
   cam: {fileID: 519420033}
@@ -4440,8 +4445,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -4609,8 +4614,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9712ed2c7e33c54989b3005c39d1885, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   bounce: 25
   audioSource: {fileID: 0}
   jumpPadSound: {fileID: 0}
@@ -4709,8 +4714,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70bce4c248788664b81864f8bd7a65c6, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   previousRoom: {fileID: 317318263}
   nextRoom: {fileID: 501479271}
   cam: {fileID: 519420033}
@@ -4910,8 +4915,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -5113,8 +5118,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 778bd20df47fe7248b49178585668d3e, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1181063861
 GameObject:
   m_ObjectHideFlags: 0
@@ -5146,7 +5151,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1870794364}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1181063863
 MonoBehaviour:
@@ -5158,8 +5163,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70bce4c248788664b81864f8bd7a65c6, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   previousRoom: {fileID: 2033061748}
   nextRoom: {fileID: 2033061748}
   cam: {fileID: 519420033}
@@ -5237,8 +5242,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70bce4c248788664b81864f8bd7a65c6, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   previousRoom: {fileID: 2027945513}
   nextRoom: {fileID: 317318263}
   cam: {fileID: 519420033}
@@ -5338,8 +5343,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -5507,8 +5512,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9712ed2c7e33c54989b3005c39d1885, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   bounce: 25
   audioSource: {fileID: 0}
   jumpPadSound: {fileID: 0}
@@ -5659,8 +5664,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -5984,19 +5989,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6626421095585269833, guid: 33b9a9073e1bc6e4b92fa79e4e5be577, type: 3}
       propertyPath: scrollbar
-      value:
+      value: 
       objectReference: {fileID: 1507635748}
     - target: {fileID: 6626421095585269833, guid: 33b9a9073e1bc6e4b92fa79e4e5be577, type: 3}
       propertyPath: restartGame
-      value:
+      value: 
       objectReference: {fileID: 1600889451}
     - target: {fileID: 6626421095585269833, guid: 33b9a9073e1bc6e4b92fa79e4e5be577, type: 3}
       propertyPath: startingPoint
-      value:
+      value: 
       objectReference: {fileID: 1164300693}
     - target: {fileID: 6626421095585269833, guid: 33b9a9073e1bc6e4b92fa79e4e5be577, type: 3}
       propertyPath: respawnPosition
-      value:
+      value: 
       objectReference: {fileID: 1518058344}
     - target: {fileID: 6626421095585269833, guid: 33b9a9073e1bc6e4b92fa79e4e5be577, type: 3}
       propertyPath: speedMultiplier
@@ -6029,8 +6034,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 615b4baf1a3e80443a2147f211dc1b21, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1341652408 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 290718772563370675, guid: d96d3e7b92c89a543858daca2935cedc, type: 3}
@@ -6109,8 +6114,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -6371,7 +6376,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1870794364}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90.8}
 --- !u!61 &1397438274
 BoxCollider2D:
@@ -6409,8 +6414,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -6588,8 +6593,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62b360c7e8e86744cb3d31d5ca28aced, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   hasBoxCollider: 0
   lose: {fileID: 1600889451}
   respawnImmediately: 0
@@ -6683,7 +6688,7 @@ Transform:
   - {fileID: 1203113495}
   - {fileID: 501479271}
   - {fileID: 1134083643}
-  - {fileID: 1653012310}
+  - {fileID: 26857983}
   - {fileID: 1000105839}
   - {fileID: 599367083}
   m_Father: {fileID: 0}
@@ -6759,8 +6764,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -7123,7 +7128,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8948526138749914121, guid: c05dfed3f07e01449b4d9244ce03860d, type: 3}
       propertyPath: m_Name
-      value: Scrollbar (1)
+      value: playerScrollBar
       objectReference: {fileID: 0}
     - target: {fileID: 8948526139692502214, guid: c05dfed3f07e01449b4d9244ce03860d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -7153,8 +7158,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1511121062
 GameObject:
   m_ObjectHideFlags: 0
@@ -7281,7 +7286,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1870794364}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1536431600
 MonoBehaviour:
@@ -7293,8 +7298,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -7528,8 +7533,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e3ea1015cf69e948b82d6a0dffcc206, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1619065913
 GameObject:
   m_ObjectHideFlags: 0
@@ -7578,8 +7583,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -7770,7 +7775,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1870794364}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1690725722
 MonoBehaviour:
@@ -7782,8 +7787,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -7949,7 +7954,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1870794364}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &1728268141
 EdgeCollider2D:
@@ -7989,8 +7994,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -8245,8 +8250,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62b360c7e8e86744cb3d31d5ca28aced, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   hasBoxCollider: 0
   lose: {fileID: 1600889451}
   respawnImmediately: 0
@@ -8377,8 +8382,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
@@ -8588,8 +8593,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90539df1cd5704abcb25fec9f3f5f84b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Spline:
     m_IsOpenEnded: 0
     m_ControlPoints:
@@ -8844,8 +8849,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 903f76f818690da449461386e0858924, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   text: {fileID: 1619065915}
 --- !u!4 &1870167651
 Transform:
@@ -8891,8 +8896,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1518058346}
-  - {fileID: 1181063862}
   - {fileID: 2035516188}
+  - {fileID: 1181063862}
   - {fileID: 1690725721}
   - {fileID: 1728268140}
   - {fileID: 1397438273}
@@ -8945,8 +8950,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70bce4c248788664b81864f8bd7a65c6, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   previousRoom: {fileID: 1891990637}
   nextRoom: {fileID: 0}
   cam: {fileID: 519420033}
@@ -9263,8 +9268,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70bce4c248788664b81864f8bd7a65c6, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   previousRoom: {fileID: 984065573}
   nextRoom: {fileID: 1782165213}
   cam: {fileID: 519420033}
@@ -9407,7 +9412,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1870794364}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2035516188 stripped
 Transform:
@@ -9692,6 +9697,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 60546815, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: restartLevelFromLatestCheckPoint
+      objectReference: {fileID: 0}
     - target: {fileID: 1049623505, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 360.9
@@ -9702,23 +9711,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1049623506, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value:
+      value: 
       objectReference: {fileID: 307446515}
     - target: {fileID: 1600889449, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
       propertyPath: lmao
-      value:
+      value: 
       objectReference: {fileID: 1285381773}
     - target: {fileID: 1600889449, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
       propertyPath: playerMov
-      value:
+      value: 
       objectReference: {fileID: 1285381773}
     - target: {fileID: 1600889449, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
       propertyPath: startingPoint
-      value:
+      value: 
       objectReference: {fileID: 1164300693}
     - target: {fileID: 2336489168731084590, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value:
+      value: 
       objectReference: {fileID: 1600889451}
     - target: {fileID: 2336489168731084590, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -9822,11 +9831,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2336489168942887436, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value:
+      value: 
       objectReference: {fileID: 307446516}
     - target: {fileID: 2336489169459540822, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value:
+      value: 
       objectReference: {fileID: 307446516}
     - target: {fileID: 2336489169459540822, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -9838,15 +9847,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2336489169549195704, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value:
+      value: 
       objectReference: {fileID: 307446515}
     - target: {fileID: 2336489169707349957, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value:
+      value: 
       objectReference: {fileID: 307446515}
     - target: {fileID: 2336489170369799027, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value:
+      value: 
       objectReference: {fileID: 307446515}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
