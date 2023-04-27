@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8785572412174473686}
   - component: {fileID: 8785572412174473681}
   m_Layer: 0
-  m_Name: Slowzone
+  m_Name: "Slowzone(anv\xE4nds inte)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
