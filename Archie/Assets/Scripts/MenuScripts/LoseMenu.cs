@@ -33,9 +33,18 @@ public class LoseMenu : MonoBehaviour
         pauseButton.SetActive(true);
         Time.timeScale = 1f;
         lmao.respawnFromCheckpoint();
-        SceneManager.LoadScene(5);
+        //SceneManager.LoadScene(5);
     }
     // Update is called once per frame
+    
+
+    public void restartLevelFromStart()
+    {
+        Time.timeScale = 1f;
+
+        lmao.respawn();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
     void Update()
     {
 
