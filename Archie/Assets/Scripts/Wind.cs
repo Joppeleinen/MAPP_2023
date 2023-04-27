@@ -12,7 +12,7 @@ public class Wind : MonoBehaviour
             if (player != null)
             {
                 PlayerMovement pm = player.GetComponent<PlayerMovement>();
-                pm.leftWind();
+                //pm.leftWind();
             }
         }
     }
