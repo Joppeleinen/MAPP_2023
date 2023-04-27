@@ -384,6 +384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasBoxCollider: 0
   lose: {fileID: 1600889451}
+  respawnImmediately: 0
 --- !u!212 &54381076
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -805,9 +806,9 @@ MonoBehaviour:
       bevelCutoff: 0
       bevelSize: 0
       spriteIndex: 0
-      corner: 0
+      corner: 1
       m_CornerMode: 1
-    - position: {x: 2, y: 0, z: 0}
+    - position: {x: 1.967156, y: 0.00000008431874, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -815,7 +816,7 @@ MonoBehaviour:
       bevelCutoff: 0
       bevelSize: 0
       spriteIndex: 0
-      corner: 0
+      corner: 1
       m_CornerMode: 1
   m_SpriteShape: {fileID: 11400000, guid: 83331f414e163b445b9cad00e86fe28c, type: 2}
   m_FillPixelPerUnit: 100
@@ -889,8 +890,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: 0, y: -0.00002849102, z: 0}
-    m_Extent: {x: 2, y: 0.5, z: 0}
+    m_Center: {x: -0.016422033, y: -0.00002849102, z: 0}
+    m_Extent: {x: 1.983578, y: 0.5, z: 0}
 --- !u!61 &172326643
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2857,7 +2858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9712ed2c7e33c54989b3005c39d1885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounce: 18
+  bounce: 19
   audioSource: {fileID: 0}
   jumpPadSound: {fileID: 0}
 --- !u!212 &599367086
@@ -4201,7 +4202,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002341172}
   m_LocalRotation: {x: -0, y: -0, z: -0.032336228, w: 0.999477}
-  m_LocalPosition: {x: -9.07, y: -23.08, z: -0.1313436}
+  m_LocalPosition: {x: -9.09, y: -23.26, z: -0.1313436}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4246,7 +4247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9712ed2c7e33c54989b3005c39d1885, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounce: 27
+  bounce: 28
   audioSource: {fileID: 0}
   jumpPadSound: {fileID: 0}
 --- !u!212 &1002341176
@@ -5232,21 +5233,21 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -2.3283544, y: 6.703418}
-  - {x: -2.3151767, y: 6.081995}
-  - {x: -2.3450856, y: 4.2556214}
-  - {x: -2.3574364, y: 3.2189367}
-  - {x: -2.322718, y: 2.4290082}
-  - {x: -2.2725544, y: 2.038334}
-  - {x: -2.185208, y: 1.756009}
-  - {x: -2.054957, y: 1.5500023}
-  - {x: -1.9154176, y: 1.3795632}
-  - {x: -1.768387, y: 1.2417454}
-  - {x: -1.6156731, y: 1.1336169}
-  - {x: -1.3004571, y: 0.9946999}
-  - {x: -0.9843218, y: 0.9393337}
-  - {x: -0.68182933, y: 0.9440038}
-  - {x: 0.813861, y: 1.2200254}
+  - {x: -2.2001724, y: 7.078539}
+  - {x: -2.219504, y: 4.55643}
+  - {x: -2.2801244, y: 2.846955}
+  - {x: -2.2706468, y: 2.1904533}
+  - {x: -2.215521, y: 1.8389425}
+  - {x: -2.0626028, y: 1.5296189}
+  - {x: -1.9288749, y: 1.3442482}
+  - {x: -1.7857138, y: 1.1965353}
+  - {x: -1.6351601, y: 1.0829179}
+  - {x: -1.4792655, y: 0.99983597}
+  - {x: -1.1597012, y: 0.911038}
+  - {x: -0.84354603, y: 0.9016205}
+  - {x: -0.41185084, y: 0.9738376}
+  - {x: 0.16173409, y: 1.1084863}
+  - {x: 0.9520893, y: 1.2490956}
   - {x: 1.3236424, y: 1.3521749}
   - {x: 1.5620846, y: 1.4820111}
   - {x: 1.6621054, y: 1.6683401}
@@ -5258,8 +5259,7 @@ EdgeCollider2D:
   - {x: 2.3485715, y: 5.8344073}
   - {x: 2.4879425, y: 6.1437316}
   - {x: 2.5465784, y: 6.4880548}
-  - {x: 2.5635123, y: 6.909984}
-  - {x: 2.537653, y: 7.6216035}
+  - {x: 2.5601888, y: 7.1405087}
   - {x: 2.4603684, y: 8.763064}
   - {x: 2.4533596, y: 9.1149235}
   - {x: 2.4611225, y: 9.253122}
@@ -5282,41 +5282,31 @@ MonoBehaviour:
   m_Spline:
     m_IsOpenEnded: 1
     m_ControlPoints:
-    - position: {x: -2.3275898, y: 6.7035203, z: 0}
-      leftTangent: {x: 0, y: 0.0000019073486, z: 0}
+    - position: {x: -2.199864, y: 7.078538, z: 0}
+      leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
-      height: 0.75
+      height: 0.3
       bevelCutoff: 0
       bevelSize: 0
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: -2.3144062, y: 6.081956, z: 0}
-      leftTangent: {x: 0.021861553, y: 0.3725524, z: 0}
-      rightTangent: {x: -0.03363371, y: -0.57722616, z: 0}
+    - position: {x: -2.2257118, y: 4.2556, z: 0}
+      leftTangent: {x: 0.017508507, y: 0.5446968, z: 0}
+      rightTangent: {x: -0.03314805, y: -1.032547, z: 0}
       mode: 1
-      height: 0.75
-      bevelCutoff: 0
-      bevelSize: 0
-      spriteIndex: 0
-      corner: 1
-      m_CornerMode: 1
-    - position: {x: -2.3443146, y: 4.2556, z: 0}
-      leftTangent: {x: 0.017508507, y: 0.5446954, z: 0}
-      rightTangent: {x: -0.03314805, y: -1.0325451, z: 0}
-      mode: 1
-      height: 0.75
+      height: 0.3
       bevelCutoff: 0
       bevelSize: 0
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
     - position: {x: -2.1845284, y: 1.7563734, z: 0}
-      leftTangent: {x: -0.17569947, y: 0.31591558, z: 0}
-      rightTangent: {x: 0.62478507, y: -1.1233917, z: 0}
+      leftTangent: {x: -0.17048025, y: 0.36553335, z: 0}
+      rightTangent: {x: 0.5791689, y: -1.2418197, z: 0}
       mode: 1
-      height: 0.75
+      height: 0.36
       bevelCutoff: 0
       bevelSize: 0
       spriteIndex: 0
@@ -5454,8 +5444,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: 0.092372656, y: 4.8134184, z: 0}
-    m_Extent: {x: 2.825429, y: 4.4748583, z: 0}
+    m_Center: {x: 0.23086691, y: 4.8165874, z: 0}
+    m_Extent: {x: 2.6869345, y: 4.471689, z: 0}
 --- !u!1001 &1285381772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6153,6 +6143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasBoxCollider: 0
   lose: {fileID: 1600889451}
+  respawnImmediately: 0
 --- !u!212 &1408435349
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7602,6 +7593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasBoxCollider: 0
   lose: {fileID: 1600889451}
+  respawnImmediately: 0
 --- !u!212 &1759790712
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8908,7 +8900,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 290718772563370673, guid: d96d3e7b92c89a543858daca2935cedc, type: 3}
       propertyPath: bounce
-      value: 26
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 290718772563370675, guid: d96d3e7b92c89a543858daca2935cedc, type: 3}
       propertyPath: m_RootOrder
