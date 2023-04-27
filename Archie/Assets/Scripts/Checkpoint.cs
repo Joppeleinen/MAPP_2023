@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-    public GameObject wall; 
+    public GameObject wall;
+    public bool activateWall = true; 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") == true)
         {
             collision.GetComponent<PlayerMovement>().ChangeRespawnPosition(gameObject);
-            wall.SetActive(true);
+            if(activateWall == true)
+            {
+                wall.SetActive(true);
+            }
+            
         }
     }
 

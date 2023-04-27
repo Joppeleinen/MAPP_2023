@@ -23,7 +23,7 @@ public class LoseMenu : MonoBehaviour
 
         playerMov.respawn();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        
+
 
     }
 
@@ -36,6 +36,15 @@ public class LoseMenu : MonoBehaviour
         SceneManager.LoadScene(5);
     }
     // Update is called once per frame
+
+
+    public void restartLevelFromStart()
+    {
+        Time.timeScale = 1f;
+
+        lmao.respawn();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
     void Update()
     {
 
