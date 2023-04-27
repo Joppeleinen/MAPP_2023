@@ -42,8 +42,16 @@ public class LoseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
 
-        lmao.respawn();
+        playerMov.respawn();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void restartLevelFromLatestCheckPoint()
+    {
+        loseMenuUI.SetActive(false);
+        pauseButton.SetActive(true);
+        Time.timeScale = 1f;
+        playerMov.respawnFromCheckpoint();
     }
     void Update()
     {
