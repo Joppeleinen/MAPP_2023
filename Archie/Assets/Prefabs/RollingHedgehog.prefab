@@ -131,3 +131,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasBoxCollider: 0
+  lose: {fileID: 0}
