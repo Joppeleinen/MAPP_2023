@@ -21,12 +21,15 @@ public class PlayerMovement : MonoBehaviour
     public Boolean hasGyro = true;
     public Scrollbar scrollbar;
     public GameObject scrollbarObject;
-    float number = 0;
+    public float number = 0;
     public float speedMultiplier = 2f;
     private string gyroMatrixPath;
     public float limits = 10f;
+    public bool useAddForce = false;
+    public float temporalNumber = 5f;
 
-
+    public float respawnFreezePositionTimer = 0f; 
+    public bool useRespawnFreezePositionTimer = false; 
     // Start is called before the first frame update
     void Start()
     {
@@ -83,15 +86,37 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            rb.velocity = new Vector2(number, rb.velocity.y);
+            if(useAddForce == false)
+            {
+                rb.velocity = new Vector2(number, rb.velocity.y);
+            }
+            else
+            {
+                rb.AddForce(new Vector2(number, rb.velocity.y));
+            }
         }
+
+        // This fixes the momentum on respawn: 
+        if(useRespawnFreezePositionTimer == true)
+        {
+            FixMomentumOnRespawn();
+            respawnFreezePositionTimer += 1f;
+            if(respawnFreezePositionTimer >= 10f){
+                rb.constraints = RigidbodyConstraints2D.None;
+                respawnFreezePositionTimer = 0f;
+                useRespawnFreezePositionTimer = false; 
+            }
+        }
+        
 
     }
     private void moveWithScroll()
     {
+
         //number = ((scrollbar.value * 10f) - 5) / 1.5f;
-        number = (scrollbar.value - 0.5f) * (10f / 1.5f); 
-        number *= speedMultiplier;
+        number = (scrollbar.value - 0.5f) * (10f / 1.5f) * temporalNumber;
+            number *= speedMultiplier;
+        
     }
 
     public void applyMultiplier(float multiplier)
@@ -109,14 +134,30 @@ public class PlayerMovement : MonoBehaviour
         //rb.velocity = new Vector2(1f, 1f);
         transform.position = boop;
         //transform.position = startingPoint.vector2; 
+
+    
     }
 
     public void respawn()
     {
-        rb.velocity = new Vector2(1f, 1f);
+        //respawn(startingPoint.vector2);
         transform.position = startingPoint.vector2;
+
+        useRespawnFreezePositionTimer = true;
+        scrollbar.value = 0.5f;
+        
+        rb.velocity = Vector2.zero;
+        
+
         
     }
+
+    public void FixMomentumOnRespawn()
+    {
+        rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+    }
+   
 
     public void respawnFromCheckpoint()
     {
