@@ -63,8 +63,10 @@ public class PlayerMovement : MonoBehaviour
         if (hasGyro)
         {
             dirX = Input.acceleration.x * moveSpeed;
+            print("Detta är gyrons värde: " + Input.acceleration.x);
             //transform.position = new Vector2(Mathf.Clamp(transform.position.x, -limits, limits), transform.position.y);
             transform.position = new Vector2(transform.position.x, transform.position.y);
+            
         }
         else
         {
@@ -83,6 +85,8 @@ public class PlayerMovement : MonoBehaviour
         if (hasGyro)
         {
             rb.velocity = new Vector2(dirX, rb.velocity.y);
+            // borde nog vara number istället. 
+            // move with scroll kan fungera här också. 
         }
         else
         {
@@ -96,12 +100,15 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+
         // This fixes the momentum on respawn: 
         if(useRespawnFreezePositionTimer == true)
         {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
             FixMomentumOnRespawn();
             respawnFreezePositionTimer += 1f;
             if(respawnFreezePositionTimer >= 10f){
+                
                 rb.constraints = RigidbodyConstraints2D.None;
                 respawnFreezePositionTimer = 0f;
                 useRespawnFreezePositionTimer = false; 
@@ -112,11 +119,44 @@ public class PlayerMovement : MonoBehaviour
     }
     private void moveWithScroll()
     {
-
-        //number = ((scrollbar.value * 10f) - 5) / 1.5f;
-        number = (scrollbar.value - 0.5f) * (10f / 1.5f) * temporalNumber;
-            number *= speedMultiplier;
+        float retarderMultipler = 1f; 
+        if(useAddForce == false)
+        {
+            number = giveVariable(scrollbar.value, false);
+        }
+        else
+        {
+            //detta bör göra så att man saktar ner snabbare. 
+            if(rb.velocity.x > 0 && scrollbar.value < 0.5f)
+            {
+                retarderMultipler = 2f; 
+            }
+            else if(rb.velocity.x < 0 && scrollbar.value > 0.5f)
+            {
+                retarderMultipler = 2f;
+            }
+            else
+            {
+                retarderMultipler = 1f; 
+            }
+            number = giveVariable(scrollbar.value, false) * retarderMultipler;
+        }
         
+    }
+
+    public float giveVariable(float value, bool usedGyro)
+    {
+        float number = value; 
+        if(usedGyro == false)
+        {
+            number -= 0.5f; 
+        }
+        else
+        {
+            number /= 2; 
+        }
+        number *= (10f / 1.5f) * speedMultiplier * temporalNumber;
+        return number; 
     }
 
     public void applyMultiplier(float multiplier)
@@ -134,8 +174,6 @@ public class PlayerMovement : MonoBehaviour
         //rb.velocity = new Vector2(1f, 1f);
         transform.position = boop;
         //transform.position = startingPoint.vector2; 
-
-    
     }
 
     public void respawn()
@@ -147,9 +185,6 @@ public class PlayerMovement : MonoBehaviour
         scrollbar.value = 0.5f;
         
         rb.velocity = Vector2.zero;
-        
-
-        
     }
 
     public void FixMomentumOnRespawn()
