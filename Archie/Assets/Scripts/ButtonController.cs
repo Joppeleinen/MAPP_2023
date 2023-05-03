@@ -23,7 +23,7 @@ public class ButtonController : MonoBehaviour
     [SerializeField] Sprite image_9;
     [SerializeField] Sprite image_10;
     [SerializeField] Text pointstext;
-    public static int score = 1000;
+    public static int score = 100000000;
 
     private string unlockMatrixPath;
 

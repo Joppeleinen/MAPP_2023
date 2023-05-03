@@ -613,7 +613,7 @@ MonoBehaviour:
   button: {fileID: 682296978}
   text: {fileID: 397733672}
   lowestValue: 1
-  highestValue: 10
+  highestValue: 11
   image_Original: {fileID: 635276534}
   image_1: {fileID: 21300000, guid: cc104b4573d03ec4294a3d111cbff499, type: 3}
   image_2: {fileID: 21300000, guid: a7c5d31ec5e6115429b97fdc2bc86a72, type: 3}
@@ -1470,7 +1470,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
