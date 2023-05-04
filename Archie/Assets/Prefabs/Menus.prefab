@@ -551,7 +551,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1600889449}
         m_TargetAssemblyTypeName: LoseMenu, Assembly-CSharp
-        m_MethodName: restartLevel
+        m_MethodName: restartLevelFromStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -695,9 +695,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loseMenuUI: {fileID: 2336489168917717096}
-  lmao: {fileID: 0}
+  playerMov: {fileID: 0}
   pauseButton: {fileID: 1049623504}
   startingPoint: {fileID: 0}
+  block: {fileID: 0}
 --- !u!1 &2336489168942886386
 GameObject:
   m_ObjectHideFlags: 0
@@ -1115,8 +1116,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: LoadMainMenu
+        m_TargetAssemblyTypeName: VictoryMenu, Assembly-CSharp
+        m_MethodName: goToMainAfterWin
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
