@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class ButtonController : MonoBehaviour
 {
     public UnlockableMatrix unlockableMatrix;
+    public AudioSource audio;
+    public Animation animation;
     public CoinMatrix coinMatrix;
     public Button button;
     public Text text;
@@ -70,6 +72,8 @@ public class ButtonController : MonoBehaviour
             int randomNumber = Random.Range(lowestValue, highestValue);
             coinMatrix.coinsSaved = coinMatrix.coinsSaved - 10;
             CoinHandler.CoinsAquired = CoinHandler.CoinsAquired - 10;
+            audio.Play();
+            animation.Play();
             if (randomNumber == 1)
             {
                 unlockableMatrix.unlock_1 = true;
