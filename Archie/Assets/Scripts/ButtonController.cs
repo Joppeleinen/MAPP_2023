@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class ButtonController : MonoBehaviour
 {
     public UnlockableMatrix unlockableMatrix;
+    public CoinMatrix coinMatrix;
     public Button button;
     public Text text;
     [SerializeField] int lowestValue = 0;
@@ -23,9 +24,10 @@ public class ButtonController : MonoBehaviour
     [SerializeField] Sprite image_9;
     [SerializeField] Sprite image_10;
     [SerializeField] Text pointstext;
-    public static int score = 100000000;
+    public int score = CoinHandler.CoinsAquired;
 
     private string unlockMatrixPath;
+    private string coinMatrixPath;
 
     public void Start()
     {
@@ -47,14 +49,27 @@ public class ButtonController : MonoBehaviour
         unlockhandler.Unlock_8 = unlockableMatrix.unlock_8;
         unlockhandler.Unlock_9 = unlockableMatrix.unlock_9;
         unlockhandler.Unlock_10 = unlockableMatrix.unlock_10;
+         coinMatrixPath = $"{Application.persistentDataPath}/CoinMatrix.json";
+
+        if (File.Exists(coinMatrixPath)) { 
+        string json = File.ReadAllText(coinMatrixPath);
+        coinMatrix = JsonUtility.FromJson<CoinMatrix>(json);
+        CoinHandler.CoinsAquired = coinMatrix.coinsSaved;
+        }
+        else
+        {
+            CoinHandler.CoinsAquired = 0;
+        }
     }
 
     public void pullNumber()
     {
-        if (score >= 1000)
+        if (score >= 10)
         {
-            score = score - 1000;
+            score = score - 10;
             int randomNumber = Random.Range(lowestValue, highestValue);
+            coinMatrix.coinsSaved = coinMatrix.coinsSaved - 10;
+            CoinHandler.CoinsAquired = CoinHandler.CoinsAquired - 10;
             if (randomNumber == 1)
             {
                 unlockableMatrix.unlock_1 = true;
@@ -118,15 +133,21 @@ public class ButtonController : MonoBehaviour
             text.text = randomNumber.ToString();
         }
         else {
-            text.text = "Not enough score!";
+            text.text = "Not enough!";
         }
         pointstext.text = "POINTS( " + score + " )";
         SaveJson();
+        SaveJsonCoin();
     }
     private void SaveJson()
     {
         string json = JsonUtility.ToJson(unlockableMatrix);
         File.WriteAllText(unlockMatrixPath, json);
+    }
+    private void SaveJsonCoin()
+    {
+        string json = JsonUtility.ToJson(coinMatrix);
+        File.WriteAllText(coinMatrixPath, json);
     }
 
 }

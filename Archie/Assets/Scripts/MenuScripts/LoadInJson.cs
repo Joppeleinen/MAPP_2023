@@ -7,7 +7,9 @@ using UnityEngine.U2D;
 public class LoadInJson : MonoBehaviour
 {
     public ActiveItemMatrix activeItemMatrix;
+    public CoinMatrix coinMatrix;
     public GyroMatrix gyroMatrix;
+    private string coinMatrixPath;
     private string activeItemPath;
     private string gyroMatrixPath;
     public UnlockableMatrix unlockableMatrix;
@@ -55,6 +57,17 @@ public class LoadInJson : MonoBehaviour
         unlockhandler.Unlock_8 = unlockableMatrix.unlock_8;
         unlockhandler.Unlock_9 = unlockableMatrix.unlock_9;
         unlockhandler.Unlock_10 = unlockableMatrix.unlock_10;
+        coinMatrixPath = $"{Application.persistentDataPath}/CoinMatrix.json";
+        if (File.Exists(coinMatrixPath))
+        {
+            string json = File.ReadAllText(coinMatrixPath);
+            coinMatrix = JsonUtility.FromJson<CoinMatrix>(json);
+            CoinHandler.CoinsAquired = coinMatrix.coinsSaved;
+        }
+        else {
+
+            CoinHandler.CoinsAquired = 0;
+        }
     }
 }
 
