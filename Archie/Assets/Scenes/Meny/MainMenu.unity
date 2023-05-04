@@ -1530,6 +1530,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1932295004}
   - component: {fileID: 1932295005}
+  - component: {fileID: 1932295006}
   m_Layer: 0
   m_Name: MainMenuButtons
   m_TagString: Untagged
@@ -1585,6 +1586,42 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 16.38}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &1932295006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932295003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2e4b199e3ff2ba439b27ed3cc167e56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeItemMatrix:
+    activeItem1: 0
+    activeItem2: 0
+    activeItem3: 0
+    activeItem4: 0
+    activeItem5: 0
+    activeItem6: 0
+    activeItem7: 0
+    activeItem8: 0
+    activeItem9: 0
+    activeItem10: 0
+  gyroMatrix:
+    gyroActivated: 0
+  unlockableMatrix:
+    unlock_1: 0
+    unlock_2: 0
+    unlock_3: 0
+    unlock_4: 0
+    unlock_5: 0
+    unlock_6: 0
+    unlock_7: 0
+    unlock_8: 0
+    unlock_9: 0
+    unlock_10: 0
 --- !u!1 &1932792045
 GameObject:
   m_ObjectHideFlags: 0

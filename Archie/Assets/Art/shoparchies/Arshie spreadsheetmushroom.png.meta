@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a2446bcec5bd89c4f8187f475a12c355
+guid: 8ffcc542fbbc3eb4fb5fd5d053a53be7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 260
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -127,7 +127,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Arshie spreadsheetmushroom_0
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 280
+        width: 355
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb985bdf79c0d804ca9bc45cf022a0f2
+      internalID: -252140910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arshie spreadsheetmushroom_1
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 280
+        width: 355
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8d1ad85858c30548842b0b2a4e0ddc9
+      internalID: -1048148020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arshie spreadsheetmushroom_2
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 280
+        width: 355
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d1203af03eada3428e83044d91d2aba
+      internalID: 83053962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arshie spreadsheetmushroom_3
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 280
+        width: 355
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cadf7b0e5e2322448e8913429a3314c
+      internalID: -670947245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -138,7 +222,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Arshie spreadsheetmushroom_0: -252140910
+      Arshie spreadsheetmushroom_1: -1048148020
+      Arshie spreadsheetmushroom_2: 83053962
+      Arshie spreadsheetmushroom_3: -670947245
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

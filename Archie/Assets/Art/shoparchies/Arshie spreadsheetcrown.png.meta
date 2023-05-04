@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a2446bcec5bd89c4f8187f475a12c355
+guid: 47ecf13283e502e44a4d63427097814d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 260
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -127,7 +127,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Arshie spreadsheetcrown_0
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 270
+        width: 352
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbbb0b32f7e6c0d45b588341aa4ee8f7
+      internalID: -923642981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arshie spreadsheetcrown_1
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 270
+        width: 352
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1efbdd45584e49e4ba076bff23a7ecca
+      internalID: -2071414219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arshie spreadsheetcrown_2
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 270
+        width: 352
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64707f03d9af052478bb8216da8aec2a
+      internalID: -17451619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arshie spreadsheetcrown_3
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 270
+        width: 352
+        height: 549
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a3a1164c0d309445b7b73852dccdb98
+      internalID: 1663561438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -138,7 +222,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Arshie spreadsheetcrown_0: -923642981
+      Arshie spreadsheetcrown_1: -2071414219
+      Arshie spreadsheetcrown_2: -17451619
+      Arshie spreadsheetcrown_3: 1663561438
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
