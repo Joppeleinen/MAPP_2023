@@ -31,14 +31,12 @@ public class ButtonController : MonoBehaviour
 
     public void Start()
     {
-        pointstext.text = "POINTS( " + score + " )";
         unlockMatrixPath = $"{Application.persistentDataPath}/UnlockMatrix.json";
 
         if (File.Exists(unlockMatrixPath)) { 
         string json = File.ReadAllText(unlockMatrixPath);
         unlockableMatrix = JsonUtility.FromJson<UnlockableMatrix>(json);
         }
-
         unlockhandler.Unlock_1 = unlockableMatrix.unlock_1;
         unlockhandler.Unlock_2 = unlockableMatrix.unlock_2;
         unlockhandler.Unlock_3 = unlockableMatrix.unlock_3;
@@ -49,7 +47,7 @@ public class ButtonController : MonoBehaviour
         unlockhandler.Unlock_8 = unlockableMatrix.unlock_8;
         unlockhandler.Unlock_9 = unlockableMatrix.unlock_9;
         unlockhandler.Unlock_10 = unlockableMatrix.unlock_10;
-         coinMatrixPath = $"{Application.persistentDataPath}/CoinMatrix.json";
+        coinMatrixPath = $"{Application.persistentDataPath}/CoinMatrix.json";
 
         if (File.Exists(coinMatrixPath)) { 
         string json = File.ReadAllText(coinMatrixPath);
@@ -60,6 +58,8 @@ public class ButtonController : MonoBehaviour
         {
             CoinHandler.CoinsAquired = 0;
         }
+        score = CoinHandler.CoinsAquired;
+        pointstext.text = "Coins( " + score + " )";
     }
 
     public void pullNumber()
@@ -132,10 +132,11 @@ public class ButtonController : MonoBehaviour
             }
             text.text = randomNumber.ToString();
         }
-        else {
+        else 
+        {
             text.text = "Not enough!";
         }
-        pointstext.text = "POINTS( " + score + " )";
+        pointstext.text = "Coins( " + score + " )";
         SaveJson();
         SaveJsonCoin();
     }
