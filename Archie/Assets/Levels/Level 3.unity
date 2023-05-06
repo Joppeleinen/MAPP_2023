@@ -3716,10 +3716,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6626421095585269833, guid: 33b9a9073e1bc6e4b92fa79e4e5be577, type: 3}
-      propertyPath: hasGyro
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6626421095585269833, guid: 33b9a9073e1bc6e4b92fa79e4e5be577, type: 3}
       propertyPath: scrollbar
       value: 
       objectReference: {fileID: 960984111}

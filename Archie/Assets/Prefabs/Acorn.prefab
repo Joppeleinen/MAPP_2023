@@ -71,7 +71,7 @@ MonoBehaviour:
     gyroActivated: 0
   moveSpeed: 40
   hasGyro: 0
-  scrollbar: {fileID: 8948526138749914119, guid: c05dfed3f07e01449b4d9244ce03860d, type: 3}
+  scrollbar: {fileID: 0}
   scrollbarObject: {fileID: 0}
   speedMultiplier: 2
   limits: 30
