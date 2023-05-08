@@ -209,3 +209,4 @@ MonoBehaviour:
   sprite10: {fileID: 21300000, guid: a2446bcec5bd89c4f8187f475a12c355, type: 3}
   sprite8: {fileID: 21300000, guid: bbd1965e6f40eb44995271a3e8e52161, type: 3}
   sprite3: {fileID: 21300000, guid: d032da92442ee3649879d2ae1c808d6c, type: 3}
+  spriteDefault: {fileID: 21300000, guid: 7b0ac316c8ed76045a81f81b12f48a18, type: 3}

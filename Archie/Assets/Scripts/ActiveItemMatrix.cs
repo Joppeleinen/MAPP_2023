@@ -11,5 +11,6 @@ public class    ActiveItemMatrix
     public bool activeItem8;
     public bool activeItem9;
     public bool activeItem10;
+    public bool activeItemDefault;
 }
 
