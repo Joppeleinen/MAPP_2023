@@ -15,4 +15,6 @@ public static class ActiveItemHandler
     public static bool activeUnlock9 { get; set; }
     public static bool activeUnlock10 { get; set; }
 
+    public static bool activeUnlockDefault { get; set; }
+
 }

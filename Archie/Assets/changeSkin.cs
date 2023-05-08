@@ -8,6 +8,7 @@ public class changeSkin : MonoBehaviour
     public Sprite sprite10;
     public Sprite sprite8;
     public Sprite sprite3;
+    public Sprite spriteDefault;
     // Sptart is called before the first frame update
     void Start()
     {
@@ -22,6 +23,10 @@ public class changeSkin : MonoBehaviour
         if (ActiveItemHandler.activeUnlock3 == true)
         {
             spriteRenderer.sprite = sprite3;
+        }
+        if (ActiveItemHandler.activeUnlockDefault == true)
+        {
+            spriteRenderer.sprite = spriteDefault;
         }
     }
 

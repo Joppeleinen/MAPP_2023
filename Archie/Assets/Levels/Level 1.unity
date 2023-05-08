@@ -2219,6 +2219,7 @@ MonoBehaviour:
   sprite6: {fileID: -252140910, guid: 8ffcc542fbbc3eb4fb5fd5d053a53be7, type: 3}
   sprite7: {fileID: -923642981, guid: 47ecf13283e502e44a4d63427097814d, type: 3}
   sprite9: {fileID: 104747219, guid: e2ae8acbfb883724e9ede7addec85297, type: 3}
+  spriteDefault: {fileID: 21300000, guid: 6c7b20b64462a2343a443120bb020fac, type: 3}
 --- !u!1 &366232117
 GameObject:
   m_ObjectHideFlags: 0

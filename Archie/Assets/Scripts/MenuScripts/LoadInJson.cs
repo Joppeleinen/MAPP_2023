@@ -32,6 +32,7 @@ public class LoadInJson : MonoBehaviour
         ActiveItemHandler.activeUnlock9 = activeItemMatrix.activeItem9;
         ActiveItemHandler.activeUnlock10 = activeItemMatrix.activeItem10;
         ActiveItemHandler.activeUnlock1 = activeItemMatrix.activeItem1;
+        ActiveItemHandler.activeUnlockDefault = activeItemMatrix.activeItemDefault;
         gyroMatrixPath = $"{Application.persistentDataPath}/GyroMatrix.json";
         if (File.Exists(gyroMatrixPath))
         {

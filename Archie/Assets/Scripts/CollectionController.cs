@@ -21,7 +21,8 @@ public class CollectionController : MonoBehaviour
     public void PressUnlock1()
     {
         activeItemMatrix.activeItem1 = true;
-            activeItemMatrix.activeItem2 = false;
+        activeItemMatrix.activeItemDefault = false;
+        activeItemMatrix.activeItem2 = false;
             activeItemMatrix.activeItem4 = false;
             activeItemMatrix.activeItem5 = false;
             activeItemMatrix.activeItem6 = false;
@@ -37,13 +38,15 @@ public class CollectionController : MonoBehaviour
         ActiveItemHandler.activeUnlock9 = activeItemMatrix.activeItem9;
         ActiveItemHandler.activeUnlock10 = activeItemMatrix.activeItem10;
         ActiveItemHandler.activeUnlock1 = activeItemMatrix.activeItem1;
+        ActiveItemHandler.activeUnlockDefault = activeItemMatrix.activeItemDefault;
         SaveJson();
     }
     public void PressUnlock2()
     {
         activeItemMatrix.activeItem2 = true;
         activeItemMatrix.activeItem1 = false;
-            activeItemMatrix.activeItem4 = false;
+        activeItemMatrix.activeItemDefault = false;
+        activeItemMatrix.activeItem4 = false;
             activeItemMatrix.activeItem5 = false;
             activeItemMatrix.activeItem6 = false;
             activeItemMatrix.activeItem7 = false;
@@ -58,6 +61,7 @@ public class CollectionController : MonoBehaviour
         ActiveItemHandler.activeUnlock9 = activeItemMatrix.activeItem9;
         ActiveItemHandler.activeUnlock10 = activeItemMatrix.activeItem10;
         ActiveItemHandler.activeUnlock1 = activeItemMatrix.activeItem1;
+        ActiveItemHandler.activeUnlockDefault = activeItemMatrix.activeItemDefault;
         SaveJson();
     }
     public void PressUnlock3()
@@ -65,6 +69,7 @@ public class CollectionController : MonoBehaviour
         activeItemMatrix.activeItem3 = true;
             activeItemMatrix.activeItem8 = false;
             activeItemMatrix.activeItem10 = false;
+        activeItemMatrix.activeItemDefault = false;
         ActiveItemHandler.activeUnlock2 = activeItemMatrix.activeItem2;
         ActiveItemHandler.activeUnlock3 = activeItemMatrix.activeItem3;
         ActiveItemHandler.activeUnlock4 = activeItemMatrix.activeItem4;
@@ -74,6 +79,7 @@ public class CollectionController : MonoBehaviour
         ActiveItemHandler.activeUnlock8 = activeItemMatrix.activeItem8;
         ActiveItemHandler.activeUnlock9 = activeItemMatrix.activeItem9;
         ActiveItemHandler.activeUnlock10 = activeItemMatrix.activeItem10;
+        ActiveItemHandler.activeUnlockDefault = activeItemMatrix.activeItemDefault;
         ActiveItemHandler.activeUnlock1 = activeItemMatrix.activeItem1;
         SaveJson();
     }
@@ -84,7 +90,8 @@ public class CollectionController : MonoBehaviour
             activeItemMatrix.activeItem1 = false;
             activeItemMatrix.activeItem5 = false;
             activeItemMatrix.activeItem6 = false;
-            activeItemMatrix.activeItem7 = false;
+        activeItemMatrix.activeItemDefault = false;
+        activeItemMatrix.activeItem7 = false;
             activeItemMatrix.activeItem9 = false;
         ActiveItemHandler.activeUnlock2 = activeItemMatrix.activeItem2;
         ActiveItemHandler.activeUnlock3 = activeItemMatrix.activeItem3;
@@ -96,6 +103,7 @@ public class CollectionController : MonoBehaviour
         ActiveItemHandler.activeUnlock9 = activeItemMatrix.activeItem9;
         ActiveItemHandler.activeUnlock10 = activeItemMatrix.activeItem10;
         ActiveItemHandler.activeUnlock1 = activeItemMatrix.activeItem1;
+        ActiveItemHandler.activeUnlockDefault = activeItemMatrix.activeItemDefault;
         SaveJson();
     }
     public void PressUnlock5()
@@ -104,7 +112,8 @@ public class CollectionController : MonoBehaviour
         activeItemMatrix.activeItem2 = false;
             activeItemMatrix.activeItem4 = false;
             activeItemMatrix.activeItem1 = false;
-            activeItemMatrix.activeItem6 = false;
+        activeItemMatrix.activeItemDefault = false;
+        activeItemMatrix.activeItem6 = false;
             activeItemMatrix.activeItem7 = false;
             activeItemMatrix.activeItem9 = false;
         
@@ -118,13 +127,15 @@ public class CollectionController : MonoBehaviour
         ActiveItemHandler.activeUnlock9 = activeItemMatrix.activeItem9;
         ActiveItemHandler.activeUnlock10 = activeItemMatrix.activeItem10;
         ActiveItemHandler.activeUnlock1 = activeItemMatrix.activeItem1;
+        ActiveItemHandler.activeUnlockDefault = activeItemMatrix.activeItemDefault;
         SaveJson();
     }
     public void PressUnlock6()
     {
         activeItemMatrix.activeItem6 = true;
         activeItemMatrix.activeItem2 = false;
-            activeItemMatrix.activeItem4 = false;
+        activeItemMatrix.activeItemDefault = false;
+        activeItemMatrix.activeItem4 = false;
             activeItemMatrix.activeItem5 = false;
             activeItemMatrix.activeItem1 = false;
             activeItemMatrix.activeItem7 = false;
@@ -137,6 +148,7 @@ public class CollectionController : MonoBehaviour
         ActiveItemHandler.activeUnlock6 = activeItemMatrix.activeItem6;
         ActiveItemHandler.activeUnlock7 = activeItemMatrix.activeItem7;
         ActiveItemHandler.activeUnlock8 = activeItemMatrix.activeItem8;
+        ActiveItemHandler.activeUnlockDefault = activeItemMatrix.activeItemDefault;
         ActiveItemHandler.activeUnlock9 = activeItemMatrix.activeItem9;
         ActiveItemHandler.activeUnlock10 = activeItemMatrix.activeItem10;
         ActiveItemHandler.activeUnlock1 = activeItemMatrix.activeItem1;
@@ -145,8 +157,10 @@ public class CollectionController : MonoBehaviour
     public void PressUnlock7()
     {
         activeItemMatrix.activeItem7 = true;
-        activeItemMatrix.activeItem2 = false;            activeItemMatrix.activeItem4 = false;
-            activeItemMatrix.activeItem5 = false;
+        activeItemMatrix.activeItem2 = false;            
+        activeItemMatrix.activeItem4 = false;
+        activeItemMatrix.activeItemDefault = false;
+        activeItemMatrix.activeItem5 = false;
             activeItemMatrix.activeItem6 = false;
             activeItemMatrix.activeItem1 = false;
             activeItemMatrix.activeItem9 = false;
@@ -160,6 +174,7 @@ public class CollectionController : MonoBehaviour
         ActiveItemHandler.activeUnlock8 = activeItemMatrix.activeItem8;
         ActiveItemHandler.activeUnlock9 = activeItemMatrix.activeItem9;
         ActiveItemHandler.activeUnlock10 = activeItemMatrix.activeItem10;
+        ActiveItemHandler.activeUnlockDefault = activeItemMatrix.activeItemDefault;
         ActiveItemHandler.activeUnlock1 = activeItemMatrix.activeItem1;
         SaveJson();
     }
@@ -167,7 +182,8 @@ public class CollectionController : MonoBehaviour
     public void PressUnlock8()
     {
         activeItemMatrix.activeItem8 = true;
-            activeItemMatrix.activeItem3 = false;
+        activeItemMatrix.activeItemDefault = false;
+        activeItemMatrix.activeItem3 = false;
             activeItemMatrix.activeItem10 = false;
         
         ActiveItemHandler.activeUnlock2 = activeItemMatrix.activeItem2;
@@ -179,6 +195,7 @@ public class CollectionController : MonoBehaviour
         ActiveItemHandler.activeUnlock8 = activeItemMatrix.activeItem8;
         ActiveItemHandler.activeUnlock9 = activeItemMatrix.activeItem9;
         ActiveItemHandler.activeUnlock10 = activeItemMatrix.activeItem10;
+        ActiveItemHandler.activeUnlockDefault = activeItemMatrix.activeItemDefault;
         ActiveItemHandler.activeUnlock1 = activeItemMatrix.activeItem1;
         SaveJson();
     }
@@ -186,7 +203,8 @@ public class CollectionController : MonoBehaviour
     {
         activeItemMatrix.activeItem9 = true;
         activeItemMatrix.activeItem2 = false;
-            activeItemMatrix.activeItem4 = false;
+        activeItemMatrix.activeItemDefault = false;
+        activeItemMatrix.activeItem4 = false;
             activeItemMatrix.activeItem5 = false;
             activeItemMatrix.activeItem6 = false;
             activeItemMatrix.activeItem7 = false;
@@ -202,6 +220,7 @@ public class CollectionController : MonoBehaviour
         ActiveItemHandler.activeUnlock9 = activeItemMatrix.activeItem9;
         ActiveItemHandler.activeUnlock10 = activeItemMatrix.activeItem10;
         ActiveItemHandler.activeUnlock1 = activeItemMatrix.activeItem1;
+        ActiveItemHandler.activeUnlockDefault = activeItemMatrix.activeItemDefault;
         SaveJson();
     }
     public void PressUnlock10()
@@ -209,6 +228,7 @@ public class CollectionController : MonoBehaviour
         activeItemMatrix.activeItem10 = true;
             activeItemMatrix.activeItem3 = false;
             activeItemMatrix.activeItem8 = false;
+        activeItemMatrix.activeItemDefault = false;
         ActiveItemHandler.activeUnlock2 = activeItemMatrix.activeItem2;
         ActiveItemHandler.activeUnlock3 = activeItemMatrix.activeItem3;
         ActiveItemHandler.activeUnlock4 = activeItemMatrix.activeItem4;
@@ -217,6 +237,33 @@ public class CollectionController : MonoBehaviour
         ActiveItemHandler.activeUnlock7 = activeItemMatrix.activeItem7;
         ActiveItemHandler.activeUnlock8 = activeItemMatrix.activeItem8;
         ActiveItemHandler.activeUnlock9 = activeItemMatrix.activeItem9;
+        ActiveItemHandler.activeUnlock10 = activeItemMatrix.activeItem10;
+        ActiveItemHandler.activeUnlockDefault = activeItemMatrix.activeItemDefault;
+        ActiveItemHandler.activeUnlock1 = activeItemMatrix.activeItem1;
+        SaveJson();
+    }
+    public void PressUnlockDefault()
+    {
+        activeItemMatrix.activeItemDefault = true;
+        activeItemMatrix.activeItem10 = false;
+        activeItemMatrix.activeItem1 = false;
+        activeItemMatrix.activeItem2= false;
+        activeItemMatrix.activeItem4 = false;
+        activeItemMatrix.activeItem5 = false;
+        activeItemMatrix.activeItem6 = false;
+        activeItemMatrix.activeItem7 = false;
+        activeItemMatrix.activeItem9 = false;
+        activeItemMatrix.activeItem3 = false;
+        activeItemMatrix.activeItem8 = false;
+        ActiveItemHandler.activeUnlock2 = activeItemMatrix.activeItem2;
+        ActiveItemHandler.activeUnlock3 = activeItemMatrix.activeItem3;
+        ActiveItemHandler.activeUnlock4 = activeItemMatrix.activeItem4;
+        ActiveItemHandler.activeUnlock5 = activeItemMatrix.activeItem5;
+        ActiveItemHandler.activeUnlock6 = activeItemMatrix.activeItem6;
+        ActiveItemHandler.activeUnlock7 = activeItemMatrix.activeItem7;
+        ActiveItemHandler.activeUnlock8 = activeItemMatrix.activeItem8;
+        ActiveItemHandler.activeUnlock9 = activeItemMatrix.activeItem9;
+        ActiveItemHandler.activeUnlockDefault = activeItemMatrix.activeItemDefault;
         ActiveItemHandler.activeUnlock10 = activeItemMatrix.activeItem10;
         ActiveItemHandler.activeUnlock1 = activeItemMatrix.activeItem1;
         SaveJson();

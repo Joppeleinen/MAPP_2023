@@ -12,6 +12,7 @@ public class change_archie_skin : MonoBehaviour
     public Sprite sprite6;
     public Sprite sprite7;
     public Sprite sprite9;
+    public Sprite spriteDefault;
     // Sptart is called before the first frame update
     void Start()
     {
@@ -42,6 +43,10 @@ public class change_archie_skin : MonoBehaviour
         if (ActiveItemHandler.activeUnlock9 == true)
         {
             spriteRenderer.sprite = sprite9;
+        }
+        if (ActiveItemHandler.activeUnlockDefault == true)
+        {
+            spriteRenderer.sprite = spriteDefault;
         }
     }
 
