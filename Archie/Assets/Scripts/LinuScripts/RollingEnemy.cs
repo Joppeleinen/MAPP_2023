@@ -47,6 +47,16 @@ public class RollingEnemy : MonoBehaviour
 
         transform.Rotate(Vector3.back, rotationSpeed * Time.deltaTime);
     }
+    public void applyMultiplier(float multiplier)
+    {
+        speed = speed * multiplier;
+
+    }
+    public void resetMultiplier()
+    {
+        speed = 80f;
+
+    }
 
     /*private void OnTriggerEnter2D(Collider2D collision)
     {

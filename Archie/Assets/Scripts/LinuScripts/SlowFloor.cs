@@ -7,6 +7,7 @@ public class SlowFloor : MonoBehaviour
 
     public float slowDownFactor = 0.5f;
     private PlayerMovement playerMovement;
+    [SerializeField] private RollingEnemy rollingEnemy;
 
     private void Start()
     {
@@ -19,6 +20,10 @@ public class SlowFloor : MonoBehaviour
         {
             playerMovement.applyMultiplier(slowDownFactor);
         }
+        if (other.gameObject.CompareTag("EffectedEnemy"))
+        {
+            rollingEnemy.applyMultiplier(slowDownFactor);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -26,6 +31,10 @@ public class SlowFloor : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             playerMovement.resetMultiplier();
+        }
+        if (other.gameObject.CompareTag("EffectedEnemy"))
+        {
+            rollingEnemy.resetMultiplier();
         }
     }
     /*
