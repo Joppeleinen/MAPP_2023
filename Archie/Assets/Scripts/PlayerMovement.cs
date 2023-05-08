@@ -13,24 +13,24 @@ public class PlayerMovement : MonoBehaviour
     public LoseMenu restartGame;
 
     public GyroMatrix gyroMatrix;
-
-    Rigidbody2D rb;
-    float dirX;
-    public float moveSpeed = 10f / 1.5f;
-    //float fixedSpeed = 10f / 1.5f;
     public Boolean hasGyro = true;
     public Scrollbar scrollbar;
-    private float number = 0; // Number = speed * multiplier. 
+
+    Rigidbody2D rb;
+
+
+    public float baseSpeed = 10f / 1.5f;
+    private float speed = 0; // speed = speed * multiplier. 
     public float speedMultiplier = 1f;
     private string gyroMatrixPath;
 
-    public bool useAddForce = false;
+    public bool useAddForce = true;
     public float howQuickToTurnAround = 2f; 
 
 
     private float respawnFreezePositionTimer = 0f; 
     private bool useRespawnFreezePositionTimer = false; 
-    // Start is called before the first frame update
+
     void Start()
     {
         
@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         {
             scrollbar.gameObject.SetActive(true);
         }
-        //moveSpeed = fixedSpeed;
+        //baseSpeed = fixedSpeed;
 
         rb = GetComponent<Rigidbody2D>();
     }
@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
         {
             fixSpeed(Input.acceleration.x, true);
 
-            //dirX = Input.acceleration.x * moveSpeed;
+            //dirX = Input.acceleration.x * baseSpeed;
             // Jag vet inte om raden under gör något och kan inte testa det. 
             //transform.position = new Vector2(transform.position.x, transform.position.y);
             
@@ -88,22 +88,22 @@ public class PlayerMovement : MonoBehaviour
         {
             if(useAddForce == false)
             {
-                rb.velocity = new Vector2(number, rb.velocity.y); //var dirX istället för number
+                rb.velocity = new Vector2(speed, rb.velocity.y); //var dirX istället för number
             }
             else
             {
-                rb.AddForce(new Vector2(number, rb.velocity.y));
+                rb.AddForce(new Vector2(speed, rb.velocity.y));
             }
         }
         else
         {
             if(useAddForce == false)
             {
-                rb.velocity = new Vector2(number, rb.velocity.y);
+                rb.velocity = new Vector2(speed, rb.velocity.y);
             }
             else
             {
-                rb.AddForce(new Vector2(number, rb.velocity.y));
+                rb.AddForce(new Vector2(speed, rb.velocity.y));
             }
         }
 
@@ -120,22 +120,20 @@ public class PlayerMovement : MonoBehaviour
                 useRespawnFreezePositionTimer = false; 
             }
         }
-        
-
     }
-    public float giveVariable(float value, bool usedGyro)
+    public float updateSpeed(float value, bool usedGyro)
     {
-        float number = value;
+        float speed = value;
         if (usedGyro == false)
         {
-            number -= 0.5f;
+            speed -= 0.5f;
         }
         else
         {
-            number /= 2;
+            speed /= 2;
         }
-        number *= moveSpeed * speedMultiplier;
-        return number;
+        speed *= baseSpeed * speedMultiplier;
+        return speed;
     }
 
     private void fixSpeed(float value, bool toggle)
@@ -157,7 +155,7 @@ public class PlayerMovement : MonoBehaviour
                 retarderMultipler = 1f;
             }
         }
-        number = giveVariable(value, toggle) * retarderMultipler;
+        speed = updateSpeed(value, toggle) * retarderMultipler;
     }
 
 
