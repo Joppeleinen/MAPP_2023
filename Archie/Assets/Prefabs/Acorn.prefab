@@ -49,9 +49,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0103292465, y: -0.010328293}
+  m_Offset: {x: -0.0040254593, y: 0}
   serializedVersion: 2
-  m_Radius: 0.97137547
+  m_Radius: 0.91644764
 --- !u!114 &6626421095585269833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,12 +69,13 @@ MonoBehaviour:
   restartGame: {fileID: 0}
   gyroMatrix:
     gyroActivated: 0
-  moveSpeed: 40
+  moveSpeed: 15
   hasGyro: 0
   scrollbar: {fileID: 0}
-  scrollbarObject: {fileID: 0}
-  speedMultiplier: 2
-  limits: 30
+  number: 0
+  speedMultiplier: 1
+  useAddForce: 1
+  howQuickToTurnAround: 2
 --- !u!50 &8724069437285517468
 Rigidbody2D:
   serializedVersion: 4
@@ -94,7 +95,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &4894110710785372372
 MonoBehaviour:
@@ -118,7 +119,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1266663056457680848}
   - component: {fileID: 6670480493909702870}
-  - component: {fileID: 8878325189760984217}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -181,7 +181,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 7b0ac316c8ed76045a81f81b12f48a18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -193,20 +193,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8878325189760984217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2885055965690368981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d80db7213621bd49a83cc059db6c7f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 6670480493909702870}
-  sprite10: {fileID: 21300000, guid: a2446bcec5bd89c4f8187f475a12c355, type: 3}
-  sprite8: {fileID: 21300000, guid: bbd1965e6f40eb44995271a3e8e52161, type: 3}
-  sprite3: {fileID: 21300000, guid: d032da92442ee3649879d2ae1c808d6c, type: 3}
-  spriteDefault: {fileID: 21300000, guid: 7b0ac316c8ed76045a81f81b12f48a18, type: 3}

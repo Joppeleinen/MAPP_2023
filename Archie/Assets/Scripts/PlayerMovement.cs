@@ -13,21 +13,24 @@ public class PlayerMovement : MonoBehaviour
     public LoseMenu restartGame;
 
     public GyroMatrix gyroMatrix;
-
-    Rigidbody2D rb;
-    float dirX;
-    public float moveSpeed = 40f;
-    float fixedSpeed = 10f;
     public Boolean hasGyro = true;
     public Scrollbar scrollbar;
-    public GameObject scrollbarObject;
-    float number = 0;
-    public float speedMultiplier = 2f;
+
+    Rigidbody2D rb;
+
+
+    public float baseSpeed = 10f / 1.5f;
+    private float speed = 0; // speed = speed * multiplier. 
+    public float speedMultiplier = 1f;
     private string gyroMatrixPath;
-    public float limits = 10f;
+
+    public bool useAddForce = true;
+    public float howQuickToTurnAround = 2f; 
 
 
-    // Start is called before the first frame update
+    private float respawnFreezePositionTimer = 0f; 
+    private bool useRespawnFreezePositionTimer = false; 
+
     void Start()
     {
         
@@ -49,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         {
             scrollbar.gameObject.SetActive(true);
         }
-        moveSpeed = fixedSpeed;
+        //baseSpeed = fixedSpeed;
 
         rb = GetComponent<Rigidbody2D>();
     }
@@ -59,13 +62,17 @@ public class PlayerMovement : MonoBehaviour
     {
         if (hasGyro)
         {
-            dirX = Input.acceleration.x * moveSpeed;
-            //transform.position = new Vector2(Mathf.Clamp(transform.position.x, -limits, limits), transform.position.y);
-            transform.position = new Vector2(transform.position.x, transform.position.y);
+            fixSpeed(Input.acceleration.x, true);
+
+            //dirX = Input.acceleration.x * baseSpeed;
+            // Jag vet inte om raden under gör något och kan inte testa det. 
+            //transform.position = new Vector2(transform.position.x, transform.position.y);
+            
         }
         else
         {
-            moveWithScroll();
+            fixSpeed(scrollbar.value, false);
+            //moveWithScroll();
         }
     }
 
@@ -79,20 +86,79 @@ public class PlayerMovement : MonoBehaviour
     {
         if (hasGyro)
         {
-            rb.velocity = new Vector2(dirX, rb.velocity.y);
+            if(useAddForce == false)
+            {
+                rb.velocity = new Vector2(speed, rb.velocity.y); //var dirX istället för number
+            }
+            else
+            {
+                rb.AddForce(new Vector2(speed, rb.velocity.y));
+            }
         }
         else
         {
-            rb.velocity = new Vector2(number, rb.velocity.y);
+            if(useAddForce == false)
+            {
+                rb.velocity = new Vector2(speed, rb.velocity.y);
+            }
+            else
+            {
+                rb.AddForce(new Vector2(speed, rb.velocity.y));
+            }
         }
 
+        // This fixes the momentum on respawn: 
+        if(useRespawnFreezePositionTimer == true)
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+            FixMomentumOnRespawn();
+            respawnFreezePositionTimer += 1f;
+            if(respawnFreezePositionTimer >= 10f){
+                
+                rb.constraints = RigidbodyConstraints2D.None;
+                respawnFreezePositionTimer = 0f;
+                useRespawnFreezePositionTimer = false; 
+            }
+        }
     }
-    private void moveWithScroll()
+    public float updateSpeed(float value, bool usedGyro)
     {
-        //number = ((scrollbar.value * 10f) - 5) / 1.5f;
-        number = (scrollbar.value - 0.5f) * (10f / 1.5f); 
-        number *= speedMultiplier;
+        float speed = value;
+        if (usedGyro == false)
+        {
+            speed -= 0.5f;
+        }
+        else
+        {
+            speed /= 2;
+        }
+        speed *= baseSpeed * speedMultiplier;
+        return speed;
     }
+
+    private void fixSpeed(float value, bool toggle)
+    {
+        float retarderMultipler = 1f;
+        if (useAddForce == true)
+        {
+            //detta gör så att man saktar ner snabbare.  
+            if (rb.velocity.x > 0 && scrollbar.value < 0.5f)
+            {
+                retarderMultipler = howQuickToTurnAround;
+            }
+            else if (rb.velocity.x < 0 && scrollbar.value > 0.5f)
+            {
+                retarderMultipler = howQuickToTurnAround;
+            }
+            else
+            {
+                retarderMultipler = 1f;
+            }
+        }
+        speed = updateSpeed(value, toggle) * retarderMultipler;
+    }
+
+
 
     public void applyMultiplier(float multiplier)
     {
@@ -101,28 +167,38 @@ public class PlayerMovement : MonoBehaviour
     }
     public void resetMultiplier()
     {
-        speedMultiplier = 2f;
+        speedMultiplier = 1f;
     }
 
     public void respawn(Vector2 boop)
     {
-        //rb.velocity = new Vector2(1f, 1f);
+
         transform.position = boop;
-        //transform.position = startingPoint.vector2; 
+
     }
 
     public void respawn()
     {
-        rb.velocity = new Vector2(1f, 1f);
+
         transform.position = startingPoint.vector2;
+
+        useRespawnFreezePositionTimer = true;
+        scrollbar.value = 0.5f;
         
+        rb.velocity = Vector2.zero;
     }
+
+    public void FixMomentumOnRespawn()
+    {
+        rb.constraints = RigidbodyConstraints2D.FreezePositionX;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+    }
+   
 
     public void respawnFromCheckpoint()
     {
         respawn(respawnPosition.transform.position);
-        //gameObject.transform.position = respawnPosition.transform.position;
-        //restartGame.restartGameWorld();
+
     }
 
     public void ChangeRespawnPosition(GameObject newRespawnPosition)
