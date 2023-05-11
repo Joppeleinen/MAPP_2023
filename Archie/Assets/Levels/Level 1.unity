@@ -1835,7 +1835,7 @@ RectTransform:
   - {fileID: 1619065914}
   - {fileID: 675744421}
   - {fileID: 1550921895}
-  - {fileID: 1507635747}
+  - {fileID: 1543791487}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6285,7 +6285,7 @@ PrefabInstance:
     - target: {fileID: 6626421095585269833, guid: 33b9a9073e1bc6e4b92fa79e4e5be577, type: 3}
       propertyPath: scrollbar
       value: 
-      objectReference: {fileID: 1507635748}
+      objectReference: {fileID: 1543791488}
     - target: {fileID: 6626421095585269833, guid: 33b9a9073e1bc6e4b92fa79e4e5be577, type: 3}
       propertyPath: restartGame
       value: 
@@ -7443,6 +7443,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 307446514}
     m_Modifications:
+    - target: {fileID: 4599296361750864935, guid: c05dfed3f07e01449b4d9244ce03860d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599296361750864935, guid: c05dfed3f07e01449b4d9244ce03860d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599296361750864935, guid: c05dfed3f07e01449b4d9244ce03860d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599296362244794886, guid: c05dfed3f07e01449b4d9244ce03860d, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599296362244794886, guid: c05dfed3f07e01449b4d9244ce03860d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.5999756
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599296362244794886, guid: c05dfed3f07e01449b4d9244ce03860d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.2000122
+      objectReference: {fileID: 0}
     - target: {fileID: 8948526138749914118, guid: c05dfed3f07e01449b4d9244ce03860d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -7545,22 +7569,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c05dfed3f07e01449b4d9244ce03860d, type: 3}
---- !u!224 &1507635747 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8948526138749914118, guid: c05dfed3f07e01449b4d9244ce03860d, type: 3}
-  m_PrefabInstance: {fileID: 1507635746}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1507635748 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8948526138749914119, guid: c05dfed3f07e01449b4d9244ce03860d, type: 3}
-  m_PrefabInstance: {fileID: 1507635746}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1511121062
 GameObject:
   m_ObjectHideFlags: 0
@@ -7851,6 +7859,22 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!224 &1543791487 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4599296362244794886, guid: c05dfed3f07e01449b4d9244ce03860d, type: 3}
+  m_PrefabInstance: {fileID: 1507635746}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1543791488 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4599296362244794887, guid: c05dfed3f07e01449b4d9244ce03860d, type: 3}
+  m_PrefabInstance: {fileID: 1507635746}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1550921895 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2336489168902419114, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
@@ -9262,6 +9286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 903f76f818690da449461386e0858924, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinMatrix:
+    coinsSaved: 0
   text: {fileID: 1619065915}
 --- !u!4 &1870167651
 Transform:
