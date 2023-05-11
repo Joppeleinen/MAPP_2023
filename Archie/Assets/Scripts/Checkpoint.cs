@@ -1,17 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
     public GameObject wall;
-    public bool activateWall = true; 
-
+    public bool activateWall = true;
+    public Animator animator;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") == true)
         {
             collision.GetComponent<PlayerMovement>().ChangeRespawnPosition(gameObject);
+            animator.SetTrigger("Activate");
             if(activateWall == true)
             {
                 wall.SetActive(true);
