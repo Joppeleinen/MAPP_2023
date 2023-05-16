@@ -448,6 +448,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 290718772563370673, guid: d96d3e7b92c89a543858daca2935cedc, type: 3}
+      propertyPath: bounce
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 290718772563370675, guid: d96d3e7b92c89a543858daca2935cedc, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -962,6 +966,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 290718772563370673, guid: d96d3e7b92c89a543858daca2935cedc, type: 3}
+      propertyPath: bounce
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 290718772563370675, guid: d96d3e7b92c89a543858daca2935cedc, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -6082,6 +6090,10 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6626421095585269833, guid: 33b9a9073e1bc6e4b92fa79e4e5be577, type: 3}
+      propertyPath: baseSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626421095585269833, guid: 33b9a9073e1bc6e4b92fa79e4e5be577, type: 3}
       propertyPath: moveSpeed
       value: 40
       objectReference: {fileID: 0}
@@ -6094,6 +6106,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1600889451}
     - target: {fileID: 6626421095585269833, guid: 33b9a9073e1bc6e4b92fa79e4e5be577, type: 3}
+      propertyPath: useAddForce
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626421095585269833, guid: 33b9a9073e1bc6e4b92fa79e4e5be577, type: 3}
       propertyPath: startingPoint
       value: 
       objectReference: {fileID: 1164300693}
@@ -6103,7 +6119,7 @@ PrefabInstance:
       objectReference: {fileID: 1518058344}
     - target: {fileID: 6626421095585269833, guid: 33b9a9073e1bc6e4b92fa79e4e5be577, type: 3}
       propertyPath: speedMultiplier
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6670480493909702870, guid: 33b9a9073e1bc6e4b92fa79e4e5be577, type: 3}
       propertyPath: m_SortingOrder
@@ -6115,7 +6131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8724069437285517468, guid: 33b9a9073e1bc6e4b92fa79e4e5be577, type: 3}
       propertyPath: m_GravityScale
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8724069437285517468, guid: 33b9a9073e1bc6e4b92fa79e4e5be577, type: 3}
       propertyPath: m_CollisionDetection
@@ -6887,6 +6903,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1975314699}
     m_Modifications:
+    - target: {fileID: 290718772563370673, guid: d96d3e7b92c89a543858daca2935cedc, type: 3}
+      propertyPath: bounce
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 290718772563370675, guid: d96d3e7b92c89a543858daca2935cedc, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -7766,6 +7786,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 803440912}
     m_Modifications:
+    - target: {fileID: 290718772563370673, guid: d96d3e7b92c89a543858daca2935cedc, type: 3}
+      propertyPath: bounce
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 290718772563370675, guid: d96d3e7b92c89a543858daca2935cedc, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -10216,6 +10240,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 198830432745301180, guid: 4ea101dc2a8466d489541d1e77c5b4b1, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 198830432745301180, guid: 4ea101dc2a8466d489541d1e77c5b4b1, type: 3}
+      propertyPath: m_GravityScale
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 198830432745301182, guid: 4ea101dc2a8466d489541d1e77c5b4b1, type: 3}
       propertyPath: m_SortingOrder
       value: 2
@@ -10235,7 +10267,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 290718772563370673, guid: d96d3e7b92c89a543858daca2935cedc, type: 3}
       propertyPath: bounce
-      value: 21
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 290718772563370675, guid: d96d3e7b92c89a543858daca2935cedc, type: 3}
       propertyPath: m_RootOrder
