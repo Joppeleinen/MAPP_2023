@@ -736,6 +736,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovableBox (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 198830432745301170, guid: 4ea101dc2a8466d489541d1e77c5b4b1, type: 3}
+      propertyPath: m_TagString
+      value: Box
+      objectReference: {fileID: 0}
     - target: {fileID: 198830432745301171, guid: 4ea101dc2a8466d489541d1e77c5b4b1, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -786,7 +790,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198830432745301180, guid: 4ea101dc2a8466d489541d1e77c5b4b1, type: 3}
       propertyPath: m_Mass
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 198830432745301180, guid: 4ea101dc2a8466d489541d1e77c5b4b1, type: 3}
       propertyPath: m_GravityScale
@@ -1285,6 +1289,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovableBox
       objectReference: {fileID: 0}
+    - target: {fileID: 198830432745301170, guid: 4ea101dc2a8466d489541d1e77c5b4b1, type: 3}
+      propertyPath: m_TagString
+      value: Box
+      objectReference: {fileID: 0}
     - target: {fileID: 198830432745301171, guid: 4ea101dc2a8466d489541d1e77c5b4b1, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -1335,7 +1343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198830432745301180, guid: 4ea101dc2a8466d489541d1e77c5b4b1, type: 3}
       propertyPath: m_Mass
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 198830432745301180, guid: 4ea101dc2a8466d489541d1e77c5b4b1, type: 3}
       propertyPath: m_GravityScale
@@ -6209,6 +6217,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovableBox (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 198830432745301170, guid: 4ea101dc2a8466d489541d1e77c5b4b1, type: 3}
+      propertyPath: m_TagString
+      value: Box
+      objectReference: {fileID: 0}
     - target: {fileID: 198830432745301171, guid: 4ea101dc2a8466d489541d1e77c5b4b1, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -6259,7 +6271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198830432745301180, guid: 4ea101dc2a8466d489541d1e77c5b4b1, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 198830432745301180, guid: 4ea101dc2a8466d489541d1e77c5b4b1, type: 3}
       propertyPath: m_GravityScale
