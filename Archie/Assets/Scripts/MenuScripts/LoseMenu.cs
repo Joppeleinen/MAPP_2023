@@ -65,7 +65,9 @@ public class LoseMenu : MonoBehaviour
     public void respawnBoxes()
     {
         foreach(GameObject box in blockList){
+            print("This is the box named: ");
             box.GetComponent<RespawnBlock>().respawnFromCheckpoint();
+            
         }
     }
     public void addBox(GameObject box)

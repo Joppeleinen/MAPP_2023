@@ -5,10 +5,10 @@ using UnityEngine;
 public class RespawnBlock : MonoBehaviour
 {
     public GameObject blockSpawn;
-    private Vector2 vector2;
+    public Vector2 vector2;
     public GameObject block;
-    private GameObject loseMenu;
-    private GameObject loseMenuScript;
+    public GameObject loseMenu;
+    public GameObject loseMenuScript;
 
     public void Start()
     {
