@@ -7,6 +7,8 @@ public class PauseMenu : MonoBehaviour
 {
 
     public bool gameIsPaused = false;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip interactSound;
 
     public GameObject pauseMenuUI;
 
@@ -26,6 +28,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void Resume ()
     {
+        audioSource.PlayOneShot(interactSound);
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         gameIsPaused = false;
@@ -33,6 +36,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause ()
     {
+        audioSource.PlayOneShot(interactSound);
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         gameIsPaused = true;
@@ -40,6 +44,7 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMainMenu()
     {
+        audioSource.PlayOneShot(interactSound);
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }

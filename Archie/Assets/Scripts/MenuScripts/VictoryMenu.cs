@@ -12,9 +12,12 @@ public class VictoryMenu : MonoBehaviour
 
     public GameObject pauseButton;
 
+    public playAudio playAudio;
+
     public int level;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip winSound;
+    [SerializeField] private AudioClip interactSound;
 
 
     public void Win()
@@ -39,6 +42,7 @@ public class VictoryMenu : MonoBehaviour
 
     public void nextLevel()
     {
+        audioSource.PlayOneShot(interactSound);
         gameIsWon = false;
         Time.timeScale = 1f;
         pauseButton.SetActive(true);
