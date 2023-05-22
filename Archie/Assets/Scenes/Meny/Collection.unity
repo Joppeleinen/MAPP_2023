@@ -2822,7 +2822,6 @@ GameObject:
   - component: {fileID: 2048055176}
   - component: {fileID: 2048055175}
   - component: {fileID: 2048055174}
-  - component: {fileID: 2048055177}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -2895,7 +2894,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2048055177}
+      - m_Target: {fileID: 220084389}
         m_TargetAssemblyTypeName: CollectionController, Assembly-CSharp
         m_MethodName: PressUnlockDefault
         m_Mode: 1
@@ -2945,32 +2944,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2048055172}
   m_CullTransparentMesh: 1
---- !u!114 &2048055177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2048055172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 403089a1eb6dd8440a71722c969b1a19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activeItemMatrix:
-    activeItem1: 0
-    activeItem2: 0
-    activeItem3: 0
-    activeItem4: 0
-    activeItem5: 0
-    activeItem6: 0
-    activeItem7: 0
-    activeItem8: 0
-    activeItem9: 0
-    activeItem10: 0
-    activeItemDefault: 0
-  audioSource: {fileID: 0}
-  interactSound: {fileID: 0}
 --- !u!1001 &7905043806775136906
 PrefabInstance:
   m_ObjectHideFlags: 0
