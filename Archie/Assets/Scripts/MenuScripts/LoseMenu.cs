@@ -11,6 +11,7 @@ public class LoseMenu : MonoBehaviour
     public Spawnpoint startingPoint;
     public RespawnBlock block;
 
+    public List<GameObject> blockList;
     public void loseLevel()
     {
         loseMenuUI.SetActive(true);
@@ -52,9 +53,21 @@ public class LoseMenu : MonoBehaviour
         pauseButton.SetActive(true);
         Time.timeScale = 1f;
         playerMov.respawnFromCheckpoint();
+        respawnBoxes();
     }
     void Update()
     {
+
+    }
+    public void respawnBoxes()
+    {
+        foreach(GameObject box in blockList){
+            box.GetComponent<RespawnBlock>().respawnFromCheckpoint();
+        }
+    }
+    public void addBox(GameObject box)
+    {
+        blockList.Add(box);
 
     }
 }
