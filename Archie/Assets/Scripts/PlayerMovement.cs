@@ -139,6 +139,15 @@ public class PlayerMovement : MonoBehaviour
         {
             speed /= 2;
         }
+        speed *= 2f;
+        if(speed < -0.25f)
+        {
+            speed = -0.25f;
+        }
+        else if(speed > 0.25f)
+        {
+            speed = 0.25f;
+        }
         speed *= baseSpeed * speedMultiplier * slowZoneMultiplier();
         return speed;
     }
