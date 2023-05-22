@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6626421095585269833}
   - component: {fileID: 8724069437285517468}
   - component: {fileID: 4894110710785372372}
+  - component: {fileID: 8213443964553196934}
   m_Layer: 0
   m_Name: Acorn
   m_TagString: Player
@@ -69,12 +70,12 @@ MonoBehaviour:
   restartGame: {fileID: 0}
   gyroMatrix:
     gyroActivated: 0
-  moveSpeed: 40
   hasGyro: 0
   scrollbar: {fileID: 0}
-  scrollbarObject: {fileID: 0}
+  baseSpeed: 6.6666665
   speedMultiplier: 2
-  limits: 30
+  useAddForce: 1
+  howQuickToTurnAround: 2
 --- !u!50 &8724069437285517468
 Rigidbody2D:
   serializedVersion: 4
@@ -106,6 +107,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ac37edaca1b69b4daa39fec06a69174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8213443964553196934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2525629556488191861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0299ff563c06864488169c80a20e565f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2885055965690368981

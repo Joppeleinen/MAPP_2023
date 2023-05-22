@@ -19,18 +19,34 @@ public class VictoryMenu : MonoBehaviour
     [SerializeField] private AudioClip winSound;
     [SerializeField] private AudioClip interactSound;
 
+    private float secondsBeforeWinScreen = 0.3f;
 
-    public void Win()
+    private float slowmotionFactor = 0.1f;
+
+    IEnumerator WaitForSeconds()
     {
+        yield return new WaitForSeconds(secondsBeforeWinScreen); //slowmo time
+        Debug.Log("Waiting");
         winMenuUI.SetActive(true);
         pauseButton.SetActive(false);
         Time.timeScale = 0f;
 
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
+ 
+    public void Win()
     {
-        if (collision.gameObject.CompareTag("Player"))
+        Time.timeScale = slowmotionFactor; //slowmo
+        Debug.Log("SlowedDown");
+        StartCoroutine(WaitForSeconds()); //slowmo
+        
+        
+        
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
         {
             gameIsWon = true;
             audioSource.PlayOneShot(winSound);
