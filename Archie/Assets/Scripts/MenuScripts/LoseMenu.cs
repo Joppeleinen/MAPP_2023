@@ -13,6 +13,7 @@ public class LoseMenu : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip loseSound;
 
+    public List<GameObject> blockList;
     public void loseLevel()
     {
         audioSource.PlayOneShot(loseSound);
@@ -55,9 +56,21 @@ public class LoseMenu : MonoBehaviour
         pauseButton.SetActive(true);
         Time.timeScale = 1f;
         playerMov.respawnFromCheckpoint();
+        respawnBoxes();
     }
     void Update()
     {
+
+    }
+    public void respawnBoxes()
+    {
+        foreach(GameObject box in blockList){
+            box.GetComponent<RespawnBlock>().respawnFromCheckpoint();
+        }
+    }
+    public void addBox(GameObject box)
+    {
+        blockList.Add(box);
 
     }
 }
