@@ -21,7 +21,6 @@ public class LoseMenu : MonoBehaviour
     public void restartLevel()
     {
         Time.timeScale = 1f;
-
         playerMov.respawn();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
