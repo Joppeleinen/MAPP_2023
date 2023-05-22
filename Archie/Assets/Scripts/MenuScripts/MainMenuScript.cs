@@ -39,6 +39,7 @@ public class MainMenuScript : MonoBehaviour
     }
     public void OpenCredits()
     {
+        audioSource.PlayOneShot(interactSound);
         SceneManager.LoadScene("Credits");
     }
     public void QuitGame()
