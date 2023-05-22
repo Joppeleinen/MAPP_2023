@@ -13,6 +13,8 @@ public class VictoryMenu : MonoBehaviour
     public GameObject pauseButton;
 
     public int level;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip winSound;
 
 
     public void Win()
@@ -28,6 +30,8 @@ public class VictoryMenu : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             gameIsWon = true;
+            audioSource.PlayOneShot(winSound);
+
             Win();
         }
 

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Killzone : MonoBehaviour
 {
-
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip hurtSound;
     public bool hasBoxCollider;
 
     public LoseMenu lose;
@@ -22,6 +23,7 @@ public class Killzone : MonoBehaviour
                 }
                 else
                 {
+                    audioSource.PlayOneShot(hurtSound);
                     lose.loseLevel();
                 }
                 
