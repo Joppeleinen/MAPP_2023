@@ -22,7 +22,7 @@ public class MainMenuScript : MonoBehaviour
     {
         if (!LoadingInitiated)
         {
-            StartCoroutine(DelayedLoad("Level1"));
+            StartCoroutine(DelayedLoad("Level 1"));
             LoadingInitiated = true;
         }
     }
