@@ -10,6 +10,7 @@ TagManager:
   - SlowFloor
   - EffectedEnemy
   - Box
+  - Archie
   layers:
   - Default
   - TransparentFX
