@@ -2198,6 +2198,7 @@ MonoBehaviour:
   audioSource: {fileID: 307446517}
   interactSound: {fileID: 8300000, guid: 9af19b103f856d246a049e94bfa0f11f, type: 3}
   pauseMenuUI: {fileID: 1064949461}
+  pauseButton: {fileID: 1049623504}
 --- !u!114 &307446516
 MonoBehaviour:
   m_ObjectHideFlags: 0

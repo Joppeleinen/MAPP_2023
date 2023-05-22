@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private AudioClip interactSound;
 
     public GameObject pauseMenuUI;
+    public GameObject pauseButton;
 
     // Update is called once per frame lol
     void Update()
@@ -32,6 +33,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         gameIsPaused = false;
+        pauseButton.SetActive(true);
     }
 
     public void Pause ()
@@ -40,6 +42,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         gameIsPaused = true;
+        pauseButton.SetActive(false);
     }
 
     public void LoadMainMenu()
