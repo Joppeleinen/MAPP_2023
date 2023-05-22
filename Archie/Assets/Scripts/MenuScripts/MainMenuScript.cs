@@ -37,6 +37,10 @@ public class MainMenuScript : MonoBehaviour
         audioSource.PlayOneShot(interactSound);
         SceneManager.LoadScene("Store");
     }
+    public void OpenCredits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
     public void QuitGame()
     {
         audioSource.PlayOneShot(interactSound);
