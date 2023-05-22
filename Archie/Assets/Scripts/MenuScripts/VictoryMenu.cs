@@ -19,7 +19,7 @@ public class VictoryMenu : MonoBehaviour
     [SerializeField] private AudioClip winSound;
     [SerializeField] private AudioClip interactSound;
 
-    private float secondsBeforeWinScreen = 0.3f;
+    private float secondsBeforeWinScreen = 0.15f;
 
     private float slowmotionFactor = 0.1f;
 
