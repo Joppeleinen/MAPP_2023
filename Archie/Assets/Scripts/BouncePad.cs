@@ -27,29 +27,27 @@ public class BouncePad : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (specialBounce == false)
         {
-            if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Box"))
+            if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Box") && sendBounce == false)
             {
-
+                collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
                 collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
+                
                 audioSource.PlayOneShot(jumpPadSound);
                 sendBounce = true;
 
             }
         }
-        else
-        {
-            if (collision.gameObject.CompareTag("Box"))
-            {
 
-                collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
-                audioSource.PlayOneShot(jumpPadSound);
-                sendBounce = true;
-            }
-        }
+    
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        sendBounce = true;
     }
 }
 
