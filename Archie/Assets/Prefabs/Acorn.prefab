@@ -4943,7 +4943,7 @@ MonoBehaviour:
     gyroActivated: 0
   hasGyro: 0
   scrollbar: {fileID: 0}
-  baseSpeed: 30
+  baseSpeed: 45
   speedMultiplier: 1
   useAddForce: 0
   howQuickToTurnAround: 1

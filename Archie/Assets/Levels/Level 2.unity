@@ -7750,7 +7750,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6626421095585269833, guid: 33b9a9073e1bc6e4b92fa79e4e5be577, type: 3}
       propertyPath: baseSpeed
-      value: 30
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 6626421095585269833, guid: 33b9a9073e1bc6e4b92fa79e4e5be577, type: 3}
       propertyPath: moveSpeed
@@ -10660,6 +10660,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2050802999}
     - target: {fileID: 5650331696901975109, guid: 368497db6198cd54698f5ab69316ccdd, type: 3}
+      propertyPath: slowZoneSound
+      value: 
+      objectReference: {fileID: 8300000, guid: f5abc2c349b8edf4b8fd1ac9c914541b, type: 3}
+    - target: {fileID: 5650331696901975109, guid: 368497db6198cd54698f5ab69316ccdd, type: 3}
       propertyPath: slowDownFactor
       value: 0.05
       objectReference: {fileID: 0}
@@ -12966,6 +12970,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 307446515}
+    - target: {fileID: 2336489170369799027, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMainMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 2336489170529227992, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
       propertyPath: m_IsActive
       value: 0
