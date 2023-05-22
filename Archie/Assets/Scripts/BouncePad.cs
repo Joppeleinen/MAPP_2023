@@ -9,6 +9,7 @@ public class BouncePad : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip jumpPadSound;
     private bool sendBounce = false;
+    public bool specialBounce = false;
     //Animator Anim;
     // Start is called before the first frame update
     void Start()
@@ -26,15 +27,27 @@ public class BouncePad : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Box"))
+        if (specialBounce == false)
         {
-            
-            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
-            audioSource.PlayOneShot(jumpPadSound);
-            sendBounce = true;
+            if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Box") && sendBounce == false)
+            {
+                collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
+                collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
+                
+                audioSource.PlayOneShot(jumpPadSound);
+                sendBounce = true;
 
+            }
         }
+
+    
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        sendBounce = true;
     }
 }
+

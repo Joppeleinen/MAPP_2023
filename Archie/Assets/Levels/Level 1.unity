@@ -6220,7 +6220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6626421095585269833, guid: 33b9a9073e1bc6e4b92fa79e4e5be577, type: 3}
       propertyPath: baseSpeed
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6626421095585269833, guid: 33b9a9073e1bc6e4b92fa79e4e5be577, type: 3}
       propertyPath: moveSpeed
@@ -6250,6 +6250,10 @@ PrefabInstance:
       propertyPath: speedMultiplier
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6626421095585269833, guid: 33b9a9073e1bc6e4b92fa79e4e5be577, type: 3}
+      propertyPath: howQuickToTurnAround
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6670480493909702870, guid: 33b9a9073e1bc6e4b92fa79e4e5be577, type: 3}
       propertyPath: m_SortingOrder
       value: 2
@@ -6260,7 +6264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8724069437285517468, guid: 33b9a9073e1bc6e4b92fa79e4e5be577, type: 3}
       propertyPath: m_GravityScale
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8724069437285517468, guid: 33b9a9073e1bc6e4b92fa79e4e5be577, type: 3}
       propertyPath: m_CollisionDetection
