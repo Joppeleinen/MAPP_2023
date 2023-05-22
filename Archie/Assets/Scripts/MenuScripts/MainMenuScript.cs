@@ -29,6 +29,10 @@ public class MainMenuScript : MonoBehaviour
     {
         SceneManager.LoadScene("Store");
     }
+    public void OpenCredits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
     public void QuitGame()
     {
         Application.Quit();
