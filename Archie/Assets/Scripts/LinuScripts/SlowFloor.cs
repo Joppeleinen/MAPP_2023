@@ -18,12 +18,10 @@ public class SlowFloor : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        while (other.gameObject.CompareTag("Player"))
-        {
-            audioSource.PlayOneShot(slowZoneSound);
-        }
+
         if (other.gameObject.CompareTag("Player"))
         {
+            audioSource.PlayOneShot(slowZoneSound);
             playerMovement.applyMultiplier(slowDownFactor);
         }
         if (other.gameObject.CompareTag("EffectedEnemy"))

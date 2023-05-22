@@ -10,9 +10,12 @@ public class LoseMenu : MonoBehaviour
     public GameObject pauseButton;
     public Spawnpoint startingPoint;
     public RespawnBlock block;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip loseSound;
 
     public void loseLevel()
     {
+        audioSource.PlayOneShot(loseSound);
         loseMenuUI.SetActive(true);
         pauseButton.SetActive(false);
         Time.timeScale = 0f;
