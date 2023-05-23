@@ -13,6 +13,8 @@ public class GyroButtonController : MonoBehaviour
     public Image image;
     public Sprite spriteoff;
     public Sprite spriteon;
+    public AudioSource audioSource;
+    public AudioClip audio;
 
 
     public void Start()
@@ -43,6 +45,7 @@ public class GyroButtonController : MonoBehaviour
             gyroMatrix.gyroActivated = true;
             image.sprite = spriteon;
         }
+        audioSource.PlayOneShot(audio);
         GyroHandler.GyroActivated = gyroMatrix.gyroActivated;
         SaveJson();
     }

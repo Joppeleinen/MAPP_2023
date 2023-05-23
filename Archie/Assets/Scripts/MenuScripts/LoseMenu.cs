@@ -10,9 +10,13 @@ public class LoseMenu : MonoBehaviour
     public GameObject pauseButton;
     public Spawnpoint startingPoint;
     public RespawnBlock block;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip loseSound;
 
+    public List<GameObject> blockList;
     public void loseLevel()
     {
+        audioSource.PlayOneShot(loseSound);
         loseMenuUI.SetActive(true);
         pauseButton.SetActive(false);
         Time.timeScale = 0f;
@@ -21,7 +25,6 @@ public class LoseMenu : MonoBehaviour
     public void restartLevel()
     {
         Time.timeScale = 1f;
-
         playerMov.respawn();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
@@ -53,9 +56,23 @@ public class LoseMenu : MonoBehaviour
         pauseButton.SetActive(true);
         Time.timeScale = 1f;
         playerMov.respawnFromCheckpoint();
+        respawnBoxes();
     }
     void Update()
     {
+
+    }
+    public void respawnBoxes()
+    {
+        foreach(GameObject box in blockList){
+            
+            box.GetComponent<RespawnBlock>().respawnFromCheckpoint();
+            
+        }
+    }
+    public void addBox(GameObject box)
+    {
+        blockList.Add(box);
 
     }
 }

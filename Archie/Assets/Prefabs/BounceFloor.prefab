@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 290718772563370672}
   - component: {fileID: 290718772563370673}
   - component: {fileID: 290718772563370674}
-  - component: {fileID: 7874112143223553984}
+  - component: {fileID: -8177515422780323519}
   m_Layer: 0
   m_Name: BounceFloor
   m_TagString: Untagged
@@ -102,8 +102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounce: 22
-  audioSource: {fileID: 7874112143223553984}
-  jumpPadSound: {fileID: 0}
+  audioSource: {fileID: -8177515422780323519}
+  jumpPadSound: {fileID: 8300000, guid: 0437694d5bbc09741954bd3b3306d084, type: 3}
   specialBounce: 0
 --- !u!61 &290718772563370674
 BoxCollider2D:
@@ -131,7 +131,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.8218136, y: 0.59439516}
   m_EdgeRadius: 0
---- !u!82 &7874112143223553984
+--- !u!82 &-8177515422780323519
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,8 +141,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 0437694d5bbc09741954bd3b3306d084, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

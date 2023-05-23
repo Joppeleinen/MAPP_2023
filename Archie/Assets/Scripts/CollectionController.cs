@@ -8,6 +8,8 @@ public class CollectionController : MonoBehaviour
 {
     public ActiveItemMatrix activeItemMatrix;
     private string activeItemPath;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip interactSound;
     public void Start()
     {
         activeItemPath = $"{Application.persistentDataPath}/ActiveItemMatrix.json";
@@ -20,6 +22,7 @@ public class CollectionController : MonoBehaviour
 
     public void PressUnlock1()
     {
+        audioSource.PlayOneShot(interactSound);
         activeItemMatrix.activeItem1 = true;
         activeItemMatrix.activeItemDefault = false;
         activeItemMatrix.activeItem2 = false;
@@ -43,6 +46,7 @@ public class CollectionController : MonoBehaviour
     }
     public void PressUnlock2()
     {
+        audioSource.PlayOneShot(interactSound);
         activeItemMatrix.activeItem2 = true;
         activeItemMatrix.activeItem1 = false;
         activeItemMatrix.activeItemDefault = false;
@@ -66,6 +70,7 @@ public class CollectionController : MonoBehaviour
     }
     public void PressUnlock3()
     {
+        audioSource.PlayOneShot(interactSound);
         activeItemMatrix.activeItem3 = true;
             activeItemMatrix.activeItem8 = false;
             activeItemMatrix.activeItem10 = false;
@@ -85,6 +90,7 @@ public class CollectionController : MonoBehaviour
     }
     public void PressUnlock4()
     {
+        audioSource.PlayOneShot(interactSound);
         activeItemMatrix.activeItem4 = true;
         activeItemMatrix.activeItem2 = false;
             activeItemMatrix.activeItem1 = false;
@@ -108,6 +114,7 @@ public class CollectionController : MonoBehaviour
     }
     public void PressUnlock5()
     {
+        audioSource.PlayOneShot(interactSound);
         activeItemMatrix.activeItem5 = true;
         activeItemMatrix.activeItem2 = false;
             activeItemMatrix.activeItem4 = false;
@@ -132,6 +139,7 @@ public class CollectionController : MonoBehaviour
     }
     public void PressUnlock6()
     {
+        audioSource.PlayOneShot(interactSound);
         activeItemMatrix.activeItem6 = true;
         activeItemMatrix.activeItem2 = false;
         activeItemMatrix.activeItemDefault = false;
@@ -156,6 +164,7 @@ public class CollectionController : MonoBehaviour
     }
     public void PressUnlock7()
     {
+        audioSource.PlayOneShot(interactSound);
         activeItemMatrix.activeItem7 = true;
         activeItemMatrix.activeItem2 = false;            
         activeItemMatrix.activeItem4 = false;
@@ -181,6 +190,7 @@ public class CollectionController : MonoBehaviour
 
     public void PressUnlock8()
     {
+        audioSource.PlayOneShot(interactSound);
         activeItemMatrix.activeItem8 = true;
         activeItemMatrix.activeItemDefault = false;
         activeItemMatrix.activeItem3 = false;
@@ -201,6 +211,7 @@ public class CollectionController : MonoBehaviour
     }
     public void PressUnlock9()
     {
+        audioSource.PlayOneShot(interactSound);
         activeItemMatrix.activeItem9 = true;
         activeItemMatrix.activeItem2 = false;
         activeItemMatrix.activeItemDefault = false;
@@ -225,6 +236,7 @@ public class CollectionController : MonoBehaviour
     }
     public void PressUnlock10()
     {
+        audioSource.PlayOneShot(interactSound);
         activeItemMatrix.activeItem10 = true;
             activeItemMatrix.activeItem3 = false;
             activeItemMatrix.activeItem8 = false;
@@ -244,6 +256,7 @@ public class CollectionController : MonoBehaviour
     }
     public void PressUnlockDefault()
     {
+        audioSource.PlayOneShot(interactSound);
         activeItemMatrix.activeItemDefault = true;
         activeItemMatrix.activeItem10 = false;
         activeItemMatrix.activeItem1 = false;

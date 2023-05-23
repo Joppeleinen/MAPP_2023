@@ -8,6 +8,8 @@ public class SlowFloor : MonoBehaviour
     public float slowDownFactor = 0.5f;
     private PlayerMovement playerMovement;
     [SerializeField] private RollingEnemy rollingEnemy;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip slowZoneSound;
 
     private void Start()
     {
@@ -16,8 +18,10 @@ public class SlowFloor : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+
         if (other.gameObject.CompareTag("Player"))
         {
+            audioSource.PlayOneShot(slowZoneSound);
             playerMovement.applyMultiplier(slowDownFactor);
         }
         if (other.gameObject.CompareTag("EffectedEnemy"))
