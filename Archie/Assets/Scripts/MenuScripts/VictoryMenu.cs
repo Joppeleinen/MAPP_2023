@@ -14,6 +14,8 @@ public class VictoryMenu : MonoBehaviour
 
     public playAudio playAudio;
 
+    bool LoadingInitiated = false;
+
     public int level;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip winSound;
@@ -32,15 +34,15 @@ public class VictoryMenu : MonoBehaviour
         Time.timeScale = 0f;
 
     }
- 
+
     public void Win()
     {
         Time.timeScale = slowmotionFactor; //slowmo
         Debug.Log("SlowedDown");
         StartCoroutine(WaitForSeconds()); //slowmo
-        
-        
-        
+
+
+
 
     }
 
@@ -58,18 +60,50 @@ public class VictoryMenu : MonoBehaviour
 
     public void nextLevel()
     {
-        audioSource.PlayOneShot(interactSound);
-        gameIsWon = false;
-        Time.timeScale = 1f;
-        pauseButton.SetActive(true);
-        SceneManager.LoadScene("Level " + level.ToString());
+
+        if (!LoadingInitiated)
+        {
+            Time.timeScale = 1f;
+            pauseButton.SetActive(true);
+            gameIsWon = false;
+            StartCoroutine(DelayedLoad("Level " + level.ToString()));
+            LoadingInitiated = true;
+        }
     }
 
     public void goToMainAfterWin()
     {
-        gameIsWon = false;
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(0);
+        if (!LoadingInitiated)
+        {
+            StartCoroutine(DelayedLoad("MainMenu"));
+            LoadingInitiated = true;
+        }
     }
 
+    IEnumerator DelayedLoad(string thingToLoad)
+    {
+        //Play the clip once
+        audioSource.PlayOneShot(interactSound);
+
+        //Wait until clip finish playing
+        yield return new WaitForSeconds(interactSound.length);
+
+        //Load scene here
+        Application.LoadLevel(thingToLoad);
+
+    }
+    IEnumerator DelayedLoadInt(int thingToLoad)
+    {
+        //Play the clip once
+        audioSource.PlayOneShot(interactSound);
+
+        //Wait until clip finish playing
+        yield return new WaitForSeconds(interactSound.length);
+
+        //Load scene here
+        Application.LoadLevel(thingToLoad);
+
+    }
 }
+
+    
