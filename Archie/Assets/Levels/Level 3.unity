@@ -447,7 +447,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 290718772563370673, guid: d96d3e7b92c89a543858daca2935cedc, type: 3}
       propertyPath: bounce
-      value: 25
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 290718772563370675, guid: d96d3e7b92c89a543858daca2935cedc, type: 3}
       propertyPath: m_RootOrder
@@ -1919,6 +1919,8 @@ MonoBehaviour:
   audioSource: {fileID: 343434856}
   winSound: {fileID: 8300000, guid: ba7eec6804b61014d9561bd23eaa21da, type: 3}
   interactSound: {fileID: 8300000, guid: 9af19b103f856d246a049e94bfa0f11f, type: 3}
+  secondsBeforeWinScreen: 0.15
+  slowmotionFactor: 0.1
 --- !u!82 &343434856
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3825,7 +3827,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 290718772563370673, guid: d96d3e7b92c89a543858daca2935cedc, type: 3}
       propertyPath: bounce
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 290718772563370675, guid: d96d3e7b92c89a543858daca2935cedc, type: 3}
       propertyPath: m_RootOrder
@@ -5813,7 +5815,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 290718772563370673, guid: d96d3e7b92c89a543858daca2935cedc, type: 3}
       propertyPath: bounce
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 290718772563370675, guid: d96d3e7b92c89a543858daca2935cedc, type: 3}
       propertyPath: m_RootOrder

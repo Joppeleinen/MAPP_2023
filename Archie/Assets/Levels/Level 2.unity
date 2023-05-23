@@ -1997,6 +1997,8 @@ MonoBehaviour:
   audioSource: {fileID: 307446517}
   winSound: {fileID: 0}
   interactSound: {fileID: 8300000, guid: 9af19b103f856d246a049e94bfa0f11f, type: 3}
+  secondsBeforeWinScreen: 0.15
+  slowmotionFactor: 0.1
 --- !u!82 &307446517
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5661,7 +5663,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6055822140045294363, guid: 368497db6198cd54698f5ab69316ccdd, type: 3}
       propertyPath: m_Volume
-      value: 0.5
+      value: 0.21
       objectReference: {fileID: 0}
     - target: {fileID: -6055822140045294363, guid: 368497db6198cd54698f5ab69316ccdd, type: 3}
       propertyPath: m_audioClip
