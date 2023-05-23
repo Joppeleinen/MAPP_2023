@@ -21,9 +21,9 @@ public class VictoryMenu : MonoBehaviour
     [SerializeField] private AudioClip winSound;
     [SerializeField] private AudioClip interactSound;
 
-    private float secondsBeforeWinScreen = 0.15f;
+    [SerializeField]   private float secondsBeforeWinScreen = 0.15f;
 
-    private float slowmotionFactor = 0.1f;
+    [SerializeField] private float slowmotionFactor = 0.1f;
 
     IEnumerator WaitForSeconds()
     {
