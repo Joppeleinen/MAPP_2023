@@ -1993,7 +1993,7 @@ MonoBehaviour:
   winMenuUI: {fileID: 714120122}
   pauseButton: {fileID: 1049623504}
   playAudio: {fileID: 0}
-  level: 2
+  level: 3
   audioSource: {fileID: 307446517}
   winSound: {fileID: 0}
   interactSound: {fileID: 8300000, guid: 9af19b103f856d246a049e94bfa0f11f, type: 3}
