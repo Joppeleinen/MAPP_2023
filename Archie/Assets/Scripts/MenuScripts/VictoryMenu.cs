@@ -75,6 +75,7 @@ public class VictoryMenu : MonoBehaviour
     {
         if (!LoadingInitiated)
         {
+            Time.timeScale = 1f;
             StartCoroutine(DelayedLoad("MainMenu"));
             LoadingInitiated = true;
         }
