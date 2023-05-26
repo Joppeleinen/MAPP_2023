@@ -1790,6 +1790,7 @@ GameObject:
   - component: {fileID: 343434851}
   - component: {fileID: 343434850}
   - component: {fileID: 343434855}
+  - component: {fileID: 343434857}
   - component: {fileID: 343434854}
   - component: {fileID: 343434856}
   m_Layer: 5
@@ -2017,6 +2018,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &343434857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 343434849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a742f6a5883da544da5369c0fe7bba84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 343434856}
+  interactSound: {fileID: 8300000, guid: 9af19b103f856d246a049e94bfa0f11f, type: 3}
 --- !u!1 &352631126
 GameObject:
   m_ObjectHideFlags: 0
@@ -3587,7 +3602,15 @@ PrefabInstance:
     - target: {fileID: 2336489168942887436, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 343434855}
+      objectReference: {fileID: 343434857}
+    - target: {fileID: 2336489168942887436, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenCredits
+      objectReference: {fileID: 0}
+    - target: {fileID: 2336489168942887436, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MainMenuScript, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2336489169459540822, guid: 87a3519a6b0c7e846b67f15657009946, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
